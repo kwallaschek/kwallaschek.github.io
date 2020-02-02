@@ -6,25 +6,16 @@ var btBtn = document.getElementById("btBtn");
 var span = document.getElementsByClassName("close")[0];
 // When the user clicks on the button, open the btModal 
 
-// Get the modal
 var bpModal = document.getElementById("bpModal");
-// Get the button that opens the btModal
 var bpBtn = document.getElementById("bpBtn");
-// Get the <span> element that closes the btModal
 var span2 = document.getElementsByClassName("close")[1];
 
-// Get the modal
 var plabModal = document.getElementById("plabModal");
-// Get the button that opens the btModal
 var plabBtn = document.getElementById("plabBtn");
-// Get the <span> element that closes the btModal
 var span3 = document.getElementsByClassName("close")[2];
 
-// Get the modal
 var erayModal = document.getElementById("erayModal");
-// Get the button that opens the btModal
 var erayBtn = document.getElementById("erayBtn");
-// Get the <span> element that closes the btModal
 var span4 = document.getElementsByClassName("close")[3];
 
 

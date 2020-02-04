@@ -1817,6 +1817,14 @@ input, select, textarea {
 			width: 100%;
 		}
 
+		.image.fit2 {
+			display: block;
+			width: 100%;
+			position: relative; 
+			top: 100%;
+
+		}
+
 		.image.featured {
 			display: block;
 			width: 100%;
@@ -2166,13 +2174,14 @@ input, select, textarea {
 		}
 
 		#logo .image {
-			position: absolute;
-			left: 0;
-			top: 0;
+			display: block;
+			width: 100%;
+			margin: 1em 0 0 0;
 		}
 
 	#nav ul {
 		list-style: none;
+		border-top: solid 1px rgba(255, 255, 255, 0.05);
 		padding-left: 0;
 		margin-bottom: 0;
 	}

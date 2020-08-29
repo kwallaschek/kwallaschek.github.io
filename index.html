@@ -8,9 +8,9 @@
 	<head>
 		<title>kl-w.de</title>
 		<meta charset="utf-8" />
-		<meta name="description" content="Master's Student of Computer Science at TU Darmstadt" />
+		<meta name="description" content="Master of Computer Science at TU Darmstadt" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="keywords" content="Kay Luis Wallaschek, Kay Wallaschek, ドイツ, 情報科学者, kl-w, kl-w.de, kl-w.com, kl-w.co.jp, kl-w.jp, TU-Darmstadt, Technische Universität Darmstadt, Technical University Darmstadt, Darmstadt 工科大学" />
+		<meta name="keywords" content="Kay Luis Wallaschek, Kay Wallaschek, ドイツ, 情報科学卒, kl-w, kl-w.de, kl-w.com, kl-w.co.jp, kl-w.jp, TU-Darmstadt, Technische Universität Darmstadt, Technical University Darmstadt, Darmstadt 工科大学" />
 		<meta name="author" content="Kay Luis Wallaschek" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
@@ -25,7 +25,7 @@
 						<div id="logo">
 							
 							<h1 id="title">Kay Luis Wallaschek</h1>
-							<p>Master's Student</p>
+							<p>M. Sc.</p>
 
 							<span class="image"><img src="images/f.jpg" alt="" /></span>
 						</div>
@@ -62,10 +62,9 @@
 						<div class="container">
 
 							<header>
-								<h2 class="alt">Hi! I'm <strong>Kay Luis Wallaschek</strong>, Master's student
-								at <br/>TU Darmstadt.</h2>
-								<p>I am currently doing my Master of Science Degree in Computer Science at TU Darmstadt in Germany, with main focus of machine learning and wireless communication networks with a Minor in Economy and Law. Between October 2018 and April 2019 I completed an exchange semester as a research student at Nihon University.
-								My main interests are: IoT, Communication Networks, AI and ML. At the moment I have Japanese Proficiency of N3 and I am planning on taking the JLPT N2 in July 2020.</p>
+								<h2 class="alt">Hi! I'm <strong>Kay Luis Wallaschek</strong>, <br/> M. Sc. at TU Darmstadt.</h2>
+								<p>I have successfully completed my Master of Science Degree in Computer Science at TU Darmstadt in Germany, with main focus of machine learning and wireless communication networks with a Minor in Economy and Law. Between October 2018 and April 2019 I completed an exchange semester as a research student at Nihon University.
+								My main interests are: IoT, Communication Networks, AI and ML. At the moment I have Japanese Proficiency of N3.</p>
 							</header>
 						</div>
 					</section>
@@ -77,20 +76,21 @@
 								<h2>Portfolio</h2>
 							</header>
 
-							<p>Current Project: Master-Thesis</p>
+							
 
 							<div class="row">
 								<div class="col-4 col-12-mobile">
 									<clickable>
-									<article id='btBtn' class="item">
+									<article id='mtBtn' class="item">
 										<a class="image fit" ><img src="images/neattcp.jpg" alt=""/></a>
 										<header>
-											<h3>NEAT-TCP <br />
-												<p><i>Bachelor Thesis</i></p>
+											<h3>Meta-Scheduling for MultiPath TCP <br />
+												<p><i>Master Thesis</i></p>
 											</h3>
 										</header>
 									</article>
 								</clickable>
+									
 								<clickable>
 									<article id='plabBtn' class="item">
 										<a class="image fit"><img src="images/plab.jpg" alt="" /></a>
@@ -103,6 +103,16 @@
 								</clickable>
 								</div>
 								<div class="col-4 col-12-mobile">
+									<clickable>
+									<article id='btBtn' class="item">
+										<a class="image fit" ><img src="images/neattcp.jpg" alt=""/></a>
+										<header>
+											<h3>NEAT-TCP <br />
+												<p><i>Bachelor Thesis</i></p>
+											</h3>
+										</header>
+									</article>
+								</clickable>
 									<clickable>
 									<article id='bpBtn' class="item">
 										<a class="image fit"><img src="images/tk4.jpg" alt="" /></a>
@@ -163,6 +173,41 @@
 
 			</div>
 		<!-- Modals -->
+		<!-- Master Thesis Modal -->
+		<div id="mtModal" class="modal">
+
+  			<!-- Modal content -->
+  			<div class="modal-content">
+    			<span class="close">&times;</span>
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2><i>Master Thesis</i><br /><br />
+							Meta-Scheduling for MultiPath TCP with Neuroevolution of Augmenting Topologies &nbsp; <a href="https://github.com/kwallaschek/metaScheduling" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></h2>
+						</header>
+						<subheader>
+
+						</subheader>
+						<p>
+Using MultiPath TCP provides many benefits, but not every component of it is yet well understood. Besides congestion control and path-manager, scheduling is one of the main parts of MultiPath TCP. MultiPath TCP allows for connections with multiple TCP subflows, which are managed by the scheduler. There are many approaches to implement schedulers, from simple rules up to complicated deep neural networks. However, most of them come with problems. The schedulers that use simple rules, like the MinRTT scheduler, lack in performance on a wider range of different topologies. Whereas deep neural network based schedulers need lots of resources for learning and in operation.
+We present a new way of creating schedulers. By using the genetic algorithm NEAT, neural networks can be evolved to tackle the problem of scheduling. These neural networks are of minimal size and thus don’t need many resources in operation, unlike deep neural networks. We present two kinds of neural network based schedulers: static schedulers, which directly choose the path for each packet for a certain topology, and meta schedulers, which don’t conduct scheduling directly. Rather, these meta schedulers have a pool of schedulers out of which they choose one for each invocation and switch the packet in regards to the chosen scheduler. We argue that small neural network should switch between well known and easy scheduling concepts to cover a wide variety of network topologies, while still having low overhead.
+Our evaluation shows that it is possible to create static and meta schedulers with our approach. The evolved static scheduler reduces the mean end-to-end delay by about 17%, increases fairness in regards to Jain’s Fairness Index by 15%, while having about the same total throughput, comparing to the well known Round Robin scheduler on a homogeneous topology with one two-subflow MultiPath TCP connection and two traditional TCP crossflows. The evolved meta scheduler, which can choose between MinRTT and RoundRobin, outperforms both of them on nearly every tested topology. This indicates that it is of benefit to be able to switch the scheduler within a data transmission.
+						</p>
+					</section>
+					<section id="two">
+						<h2>Used techniques</h2>
+									<ul>
+										<li><a href="https://www.nsnam.org/" target="_blank">ns3</a></li>
+										<li>C++</li>
+										<li>Mininet</li>
+										<li>ProgMP</li>
+										<li>Python (for visualizations)</li>
+									</ul>
+					</section>
+  			</div>
+
+		</div>
 		<!-- Bachelor Thesis Modal -->
 		<div id="btModal" class="modal">
 
@@ -179,7 +224,9 @@
 						<subheader>
 
 						</subheader>
-						<p>NEAT-TCP is a novel technique to automatically generate congestion control algorithms in a data-driven fashion while optimizing towards a specified global system utility. NEAT-TCP employs an artificial neural network (ANN) in each node and generates a population of ANNs by means of an evolutionary algorithm called NEAT. The ANNs run independently from each other at the communication endpoints and take only features as inputs that are locally available at these nodes. The system utility is defined as a combined maximization of overall throughput and throughput fairness between flows according to Jain’s fairness index. The nodes are deployed in a grid topology in ns-3 simulations, which makes it particularly difficult to maximize the utility due to different interference levels for the data flows. In the conducted experiments, NEAT-TCP achieves 69% more fairness, 66% less mean end-to-end delay and 71% less packet loss in relation to TCP New Reno at the cost of 19% less overall throughput, which meets the multi-criteria objective.</p>
+						<p>NEAT-TCP is a novel technique to automatically generate congestion control algorithms in a data-driven fashion while optimizing towards a specified global system utility. NEAT-TCP employs an artificial neural network (ANN) in each node and generates a population of ANNs by means of an evolutionary algorithm called NEAT. The ANNs run independently from each other at the communication endpoints and take only features as inputs that are locally available at these nodes. The system utility is defined as a combined maximization of overall throughput and throughput fairness between flows according to Jain’s fairness index. The nodes are deployed in a grid topology in ns-3 simulations, which makes it particularly difficult to maximize the utility due to different interference levels for the data flows. In the conducted experiments, NEAT-TCP achieves 69% more fairness, 66% less mean end-to-end delay and 71% less packet loss in relation to TCP New Reno at the cost of 19% less overall throughput, which meets the multi-criteria objective.
+						Link to the published paper: <a href=https://ieeexplore.ieee.org/document/9145446> click here </a>
+						</p>
 					</section>
 					<section id="two">
 						<h2>Used techniques</h2>

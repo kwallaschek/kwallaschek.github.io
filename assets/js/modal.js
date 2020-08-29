@@ -18,6 +18,9 @@ var erayModal = document.getElementById("erayModal");
 var erayBtn = document.getElementById("erayBtn");
 var span4 = document.getElementsByClassName("close")[3];
 
+var mtModal = document.getElementById("mtModal");
+var mtBtn = document.getElementById("mtBtn");
+var span5 = document.getElementsByClassName("close")[4];
 
 
 btBtn.onclick = function() {
@@ -32,7 +35,9 @@ plabBtn.onclick = function() {
 erayBtn.onclick = function() {
   erayModal.style.display = "block";
 }
-
+mtBtn.onclick = function() {
+  mtModal.style.display = "block";
+}
 // When the user clicks on <span> (x), close the btModal
 span.onclick = function() {
   btModal.style.display = "none";
@@ -46,10 +51,15 @@ span3.onclick = function() {
 span4.onclick = function() {
   erayModal.style.display = "none";
 }
+span5.onclick = function() {
+  mtModal.style.display = "none";
+}
 // When the user clicks anywhere outside of the btModal, close it
 window.onclick = function(event) {
   if (event.target == btModal) {
     btModal.style.display = "none";
+  } else if (event.target == mtModal) {
+    mtModal.style.display = "none";
   } else if (event.target == bpModal) {
     bpModal.style.display = "none";
   }else if (event.target == plabModal) {

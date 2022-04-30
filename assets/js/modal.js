@@ -22,6 +22,10 @@ var mtModal = document.getElementById("mtModal");
 var mtBtn = document.getElementById("mtBtn");
 var span5 = document.getElementsByClassName("close")[4];
 
+var mtModal = document.getElementById("noteplanModal");
+var mtBtn = document.getElementById("noteplanBtn");
+var span6 = document.getElementsByClassName("close")[4];
+
 
 btBtn.onclick = function() {
   btModal.style.display = "block";
@@ -37,6 +41,9 @@ erayBtn.onclick = function() {
 }
 mtBtn.onclick = function() {
   mtModal.style.display = "block";
+}
+noteplanBtn.onclick = function() {
+  noteplanModal.style.display = "block";
 }
 // When the user clicks on <span> (x), close the btModal
 span.onclick = function() {
@@ -54,6 +61,9 @@ span4.onclick = function() {
 span5.onclick = function() {
   mtModal.style.display = "none";
 }
+span6.onclick = function() {
+  noteplanModal.style.display = "none";
+}
 // When the user clicks anywhere outside of the btModal, close it
 window.onclick = function(event) {
   if (event.target == btModal) {
@@ -66,5 +76,7 @@ window.onclick = function(event) {
     plabModal.style.display = "none";
   }else if (event.target == erayModal) {
     erayModal.style.display = "none";
+  }else if (event.target == noteplanModal) {
+    noteplanModal.style.display = "none";
   }
 }

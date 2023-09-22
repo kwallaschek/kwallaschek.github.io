@@ -1,391 +1,805 @@
-<!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>kl-w.de</title>
-		<meta charset="utf-8" />
-		<meta name="description" content="Master of Computer Science at TU Darmstadt" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="keywords" content="Kay Luis Wallaschek, Kay Wallaschek, ドイツ, 情報科学卒, kl-w, kl-w.de, kl-w.com, kl-w.co.jp, kl-w.jp, TU-Darmstadt, Technische Universität Darmstadt, Technical University Darmstadt, Darmstadt 工科大学" />
-		<meta name="author" content="Kay Luis Wallaschek" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
 
-		<!-- Header -->
-			<div id="header">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Kay Luis Wallaschek, Kay Wallaschek, ドイツ, 情報科学卒, kl-w, kl-w.de, kl-w.com, kl-w.co.jp, kl-w.jp, TU-Darmstadt, Technische Universität Darmstadt, Technical University Darmstadt, Darmstadt 工科大学, Engineer, Back-end Engineer, Software Architect, Portfolio, Ruby, Rails, Rails Engineer, Ruby on Rails Engineer" />
+	<meta name="author" content="Kay Luis Wallaschek" />
+  <meta name="description" content="Kay Luis Wallaschek - Personal Portfolio" />
+  <title>Kay Luis Wallaschek - Personal Portfolio</title>
 
-				<div class="top">
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-					<!-- Logo -->
-						<div id="logo">
-							
-							<h1 id="title">Kay Luis Wallaschek</h1>
-							<p>M. Sc.</p>
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-							<span class="image"><img src="images/f.jpg" alt="" /></span>
-						</div>
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
+<body>
 
-				</div>
+  <!--
+    - #MAIN
+  -->
 
-				<div class="bottom">
+  <main>
 
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://github.com/kwallaschek" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="https://de.linkedin.com/in/kay-luis-wallaschek-195396188" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="mailto:kayluis.wallaschek@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
+    <!--
+      - #SIDEBAR
+    -->
 
-				</div>
+    <aside class="sidebar" data-sidebar>
 
-			</div>
+      <div class="sidebar-info">
 
-		<!-- Main -->
-			<div id="main">
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar_3.png" alt="Kay Luis Wallaschek" width="80">
+        </figure>
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
+        <div class="info-content">
+          <h1 class="name" title="Kay">Kay Luis Wallaschek</h1>
 
-							<header>
-								<h2 class="alt">Hi! I'm <strong>Kay Luis Wallaschek</strong>, <br/> M. Sc. at TU Darmstadt.</h2>
-								<p>I have completed my Master of Science Degree in Computer Science at TU Darmstadt in Germany, with a primary focus on machine learning and wireless communication networks with a Minor in Economy and Law. Between October 2018 and April 2019, I completed an exchange semester as a research student at Nihon University. My main interests are IoT, Communication Networks, AI, and ML. At the moment, I have a Japanese Proficiency of N2.
-								Currently, I work at MoneyForward, in Tokyo, Japan,  as a software engineer, with primary responsibilities in the backend.</p>
-							</header>
-						</div>
-					</section>
-				<!-- Portfolio -->
-					<section id="portfolio" class="two">
-						<div class="container">
+          <p class="title">Back-End Developer</p>
+        </div>
 
-							<header>
-								<h2>Portfolio</h2>
-							</header>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
 
-							
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
 
-							<div class="row">
-								<div class="col-4 col-12-mobile">
+      </div>
 
-								<clickable>
-									<article id='mtBtn' class="item">
-										<a class="image fit" ><img src="images/neattcp.jpg" alt=""/></a>
-										<header>
-											<h3>Meta-Scheduling for MultiPath TCP <br />
-												<p><i>Master Thesis</i></p>
-											</h3>
-										</header>
-									</article>
-								</clickable>
-									
-								<clickable>
-									<article id='plabBtn' class="item">
-										<a class="image fit"><img src="images/plab.jpg" alt="" /></a>
-										<header>
-											<h3>Practical Evaluation of NEAT-TCP <br />
-												<p><i>Practical Lab</i></p>
-											</h3>
-										</header>
-									</article>
-								</clickable>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<clickable>
-									<article id='btBtn' class="item">
-										<a class="image fit" ><img src="images/neattcp.jpg" alt=""/></a>
-										<header>
-											<h3>NEAT-TCP <br />
-												<p><i>Bachelor Thesis</i></p>
-											</h3>
-										</header>
-									</article>
-								</clickable>
-									<clickable>
-									<article id='bpBtn' class="item">
-										<a class="image fit"><img src="images/tk4.jpg" alt="" /></a>
-										<header>
-											<h3>Social Li(f|v)e Tracking<br />
-												<p><i>Practical Lab</i></p>
-											</h3>
-										</header>
-									</article>
-								</clickable>
-									
-								</div>
-								<div class="col-4 col-12-mobile">
-									<clickable>
-									<article id='erayBtn' class="item">
-										<a  class="image fit"><img src="images/eray.jpg" alt="" /></a>
-										<header>
-											<h3>E-Ray Webplatform<br />
-												<p><i>Practical Lab</i></p>
-											</h3>
-										</header>
-									</article>
-									</clickable>
-									<clickable>
-									<article id='noteplanBtn' class="item">
-										<a class="image fit" ><img src="images/noteplan_kibela.jpg" alt=""/></a>
-										<header>
-											<h3>NotePlan Kibela Integration <br />
-												<p><i>Workflow Improvement</i></p>
-											</h3>
-										</header>
-									</article>
-								</clickable>
-								</div>
-							</div>
+      <div class="sidebar-info_more">
 
-						</div>
-					</section>
+        <div class="separator"></div>
 
-				<!-- Contact -->
-					<section id="contact" class="three">
-						<div class="container">
+        <ul class="contacts-list">
 
-							<header>
-								<h2>Contact</h2>
-							</header>
-							<ul class="icons">
-								<li><a href="https://github.com/kwallaschek" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<li><a href="https://de.linkedin.com/in/kay-luis-wallaschek-195396188" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a href="mailto:kayluis.wallaschek@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-							<p>The best way to contact me is via Email: <a href="mailto:kayluis.wallaschek@gmail.com">kayluis.wallaschek@gmail.com<br/></a>
-							</p>
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:kayluis.wallaschek@gmail.com" class="contact-link">kayluis.wallaschek@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">November 1, 1994</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Yokohama, Kanagawa, Japan</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/kwallaschek" target="_blank" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/kay-luis-wallaschek-195396188/" target="_blank" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="mailto:kayluis.wallaschek@gmail.com" class="social-link">
+              <ion-icon name="mail"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Hello! My name is Kay Luis Wallaschek and I am a dedicated and detail-oriented software engineering professional from Germany, currently living and working in Tokyo, Japan since 2020.
+          </p>
+
+          <p>
+            My academic journey led me to obtain a Master's in Computer Science, setting a robust foundation for my career in the tech industry. I began my professional journey as a Back-End Engineer and gradually found myself engrossed in the fascinating world of software architecture. I’ve discovered a passion for analyzing, creating, and optimizing complex system designs, essentially bridging the gap between problem and solution.
+          </p>
+          <p>
+            As a hard worker and an avid learner, I quickly adapt to new work environments and enjoy expanding my skillset in accordance with the requirements of each unique project. I am a firm advocate of utilizing the appropriate tools for specific problems and value efficiency as well as effectiveness in my technical approach.
+          </p>
+          <p>
+            Perhaps my most compelling trait, the one that drives all my work, is my ability to spot and solve problems. This has inspired me to not just solve immediate software issues, but to develop solutions that optimize the overall software architecture for smooth, resilient, robust, and efficient functioning.
+          </p>
+          <p>
+            So whether you're looking for a collaborative team member, or a problem-finder and solver, I'm only one message away. Let's connect and talk more about how I can contribute to your cause.
+          </p>
+        </section>
 
 
-						</div>
-					</section>
+        <!--
+          - service
+        -->
 
-			</div>
+        <section class="service">
 
-		<!-- Footer -->
-			<div id="footer">
+          <h3 class="h3 service-title">What i'm doing</h3>
 
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Kay Luis Wallaschek. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+          <ul class="service-list">
 
-			</div>
-		<!-- Modals -->
-		<!-- Master Thesis Modal -->
-		<div id="mtModal" class="modal">
+            <li class="service-item">
 
-  			<!-- Modal content -->
-  			<div class="modal-content">
-    			<span class="close">&times;</span>
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2><i>Master Thesis</i><br /><br />
-							Meta-Scheduling for MultiPath TCP with Neuroevolution of Augmenting Topologies &nbsp; <a href="https://github.com/kwallaschek/metaScheduling" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></h2>
-						</header>
-						<subheader>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Software Architecture</h4>
 
-						</subheader>
-						<p>
-Using MultiPath TCP provides many benefits, but not every component of it is yet well understood. Besides congestion control and path-manager, scheduling is one of the main parts of MultiPath TCP. MultiPath TCP allows for connections with multiple TCP subflows, which are managed by the scheduler. There are many approaches to implement schedulers, from simple rules up to complicated deep neural networks. However, most of them come with problems. The schedulers that use simple rules, like the MinRTT scheduler, lack in performance on a wider range of different topologies. Whereas deep neural network based schedulers need lots of resources for learning and in operation.
-We present a new way of creating schedulers. By using the genetic algorithm NEAT, neural networks can be evolved to tackle the problem of scheduling. These neural networks are of minimal size and thus don’t need many resources in operation, unlike deep neural networks. We present two kinds of neural network based schedulers: static schedulers, which directly choose the path for each packet for a certain topology, and meta schedulers, which don’t conduct scheduling directly. Rather, these meta schedulers have a pool of schedulers out of which they choose one for each invocation and switch the packet in regards to the chosen scheduler. We argue that small neural network should switch between well known and easy scheduling concepts to cover a wide variety of network topologies, while still having low overhead.
-Our evaluation shows that it is possible to create static and meta schedulers with our approach. The evolved static scheduler reduces the mean end-to-end delay by about 17%, increases fairness in regards to Jain’s Fairness Index by 15%, while having about the same total throughput, comparing to the well known Round Robin scheduler on a homogeneous topology with one two-subflow MultiPath TCP connection and two traditional TCP crossflows. The evolved meta scheduler, which can choose between MinRTT and RoundRobin, outperforms both of them on nearly every tested topology. This indicates that it is of benefit to be able to switch the scheduler within a data transmission.
-						</p>
-					</section>
-					<section id="two">
-						<h2>Used techniques</h2>
-									<ul>
-										<li><a href="https://www.nsnam.org/" target="_blank">ns3</a></li>
-										<li>C++</li>
-										<li>Mininet</li>
-										<li>ProgMP</li>
-										<li>Python (for visualizations)</li>
-									</ul>
-					</section>
-  			</div>
+                <p class="service-item-text">
+                  The most accurate and most fitting architecture design for any problem. From monolithic to microservices.
+                </p>
+              </div>
 
-		</div>
-		<!-- Bachelor Thesis Modal -->
-		<div id="btModal" class="modal">
+            </li>
 
-  			<!-- Modal content -->
-  			<div class="modal-content">
-    			<span class="close">&times;</span>
+            <li class="service-item">
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2><i>Bachelor Thesis</i><br /><br />
-							NEAT-TCP: Generation of TCP Congestion Control Through Neuroevolution of Augmenting Topologies &nbsp; <a href="https://github.com/kwallaschek/NEAT-TCP" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></h2>
-						</header>
-						<subheader>
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
 
-						</subheader>
-						<p>NEAT-TCP is a novel technique to automatically generate congestion control algorithms in a data-driven fashion while optimizing towards a specified global system utility. NEAT-TCP employs an artificial neural network (ANN) in each node and generates a population of ANNs by means of an evolutionary algorithm called NEAT. The ANNs run independently from each other at the communication endpoints and take only features as inputs that are locally available at these nodes. The system utility is defined as a combined maximization of overall throughput and throughput fairness between flows according to Jain’s fairness index. The nodes are deployed in a grid topology in ns-3 simulations, which makes it particularly difficult to maximize the utility due to different interference levels for the data flows. In the conducted experiments, NEAT-TCP achieves 69% more fairness, 66% less mean end-to-end delay and 71% less packet loss in relation to TCP New Reno at the cost of 19% less overall throughput, which meets the multi-criteria objective.
-						Link to the published paper: <a href=https://ieeexplore.ieee.org/document/9145446> click here </a>
-						</p>
-					</section>
-					<section id="two">
-						<h2>Used techniques</h2>
-									<ul>
-										<li><a href="https://www.nsnam.org/" target="_blank">ns3</a></li>
-										<li>C++</li>
-										<li>Python (for visualizations)</li>
-									</ul>
-					</section>
-  			</div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Back-End Web development</h4>
 
-		</div>
-		<!-- Bachelor Project-->
-		<div id="bpModal" class="modal">
+                <p class="service-item-text">
+                  High-quality development of the back-end at the professional level.
+                </p>
+              </div>
 
-  			<!-- Modal content -->
-  			<div class="modal-content">
-    			<span class="close">&times;</span>
+            </li>
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2><i>Practical Lab</i><br /><br />
-							Social Li(f|v)e Tracking</h2>
-						</header>
-						<subheader>
+            <li class="service-item">
 
-						</subheader>
-						<p>This project comprised of the task of building a social app for Android in a team of 3 students. This app is a fusion of facebook, iOS friends app and iOS health app with gamification, but it automatically creates a timeline for the user out of its Google API activity data and GPS location. I worked in the front-end development and task managing. The App was written in Java, while we used a node.js server with mongoose.<br />
-						Sadly there is no public source code available for this project.</p>
-					</section>
-					<section id="two">
-						<h2>Used techniques</h2>
-									<ul>
-										<li><a href="https://developer.android.com/studio" target="_blank">Android Studio</a></li>
-										<li><a href="https://nodejs.org/en/" target="_blank">node.js</a></li>
-										<li><a href="https://mongoosejs.com/" target="_blank">mongoose</a></li>
-										<li>Java</li>
-										<li>JavaScript</li>
-									</ul>
-					</section>
-  			</div>
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
 
-		</div>
-		<!-- Practical Evaluation Project-->
-		<div id="plabModal" class="modal">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Hobbies</h4>
 
-  			<!-- Modal content -->
-  			<div class="modal-content">
-    			<span class="close">&times;</span>
+                <p class="service-item-text">
+                  I am a passionate home cook, new to running and aspire to become a photographer.
+                </p>
+              </div>
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2><i>Practical Lab</i><br /><br />
-							Practical Evaluation of NEAT-TCP &nbsp; <a href="https://github.com/kwallaschek/NEAT-TCP-Practical-Evaluation" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></h2>
-						</header>
-						<subheader>
-						</subheader>
-						<p>This project is a extention work of my Bachelor's Thesis. As I wasn't able to evaluate NEAT-TCP outside of ns-3 simulations, the target of this project was to evaluate TCP Congestion Control that was created by NEAT-TCP on a real testbed out of 25 raspberry pis. <br />
-						The contributions of this project constited out of:
-						<ul>
-							<li>Porting of NEAT-TCP from ns-3 to Linux as a pluggable kernel module.</li>
-							<li>Planning and building of a testbed.</li>
-							<li>Evaluation of NEAT-TCP and other Congestion Control algorithms on this testbed in comparison to ns-3 results.</li>
-						</ul>
+            </li>
 
-						</p>
-					</section>
-					<section id="two">
-						<h2>Used techniques</h2>
-									<ul>
-										<li><a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">Raspbian</a></li>
-										<li>C</li>
-										<li>Phyton (for visualizations)</li>
-									</ul>
-					</section>
-  			</div>
+          </ul>
 
-		</div>
-		<!-- eRay Project-->
-		<div id="erayModal" class="modal">
+        </section>
 
-  			<!-- Modal content -->
-  			<div class="modal-content">
-    			<span class="close">&times;</span>
+      </article>
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2><i>Practical Lab</i><br /><br />
-							Web-Platform for <a href="https://www.e-ray.eu/" target="_blank">e-Ray</a> &nbsp;<a href="https://github.com/e-Ray/web_platform" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></h2>
-						</header>
-						<subheader>
-						</subheader>
-						<p>E-ray is a start-up which provides water power plant for private use. The task of this project was to create a web-platform, so their costumers could see the sensor data of their power plants in real time. The team consisted of 4 students and the project was done as a practical lab for university. The project can be seen on github.</p>
-					</section>
-					<section id="two">
-						<h2>Used techniques</h2>
-									<ul>
-										<li><a href="https://firebase.google.com/" target="_blank">Firebase</a></li>
-										<li><a href="https://greenkeeper.io/" target="_blank">GreenKeeper</a></li>
-										<li><a href="https://travis-ci.org/" target="_blank">TravisCI</a></li>
-										<li><a href="https://codeclimate.com/" target="_blank">CodeClimate</a></li>
-										<li>JavaScript</li>
-										<li>React</li>
-									</ul>
-					</section>
-  			</div>
+      <!--
+        - #RESUME
+      -->
 
-		</div>
-		<!-- NotePlan Project-->
-		<div id="noteplanModal" class="modal">
+      <article class="resume" data-page="resume">
 
-  			<!-- Modal content -->
-  			<div class="modal-content">
-    			<span class="close">&times;</span>
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2><i>Workflow Improvement</i><br /><br />
-							Integration of Kibela's API into local note-taking app NotePlan for automatic synchronization. &nbsp;<a href="https://github.com/kwallaschek/noteplan_kibela_integration" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></h2>
-						</header>
-						<subheader>
-						</subheader>
-						<p>For more details visit: <a href="https://moneyforward.com/engineers_blog/2022/03/29/kibela-api-into-noteplan/" target="_blank"> MoneyForward's Engineers' Blog </a></p>
-					</section>
-					<section id="two">
-						<h2>Used techniques</h2>
-									<ul>
-										<li><a href="https://www.ruby-lang.org/en/" target="_blank">Ruby</a></li>
-									</ul>
-					</section>
-  			</div>
+        <section class="timeline">
 
-		</div>
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/modal.js"></script>
-			<script src="assets/js/contactForm.js"></script>
-			
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
 
-	</body>
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">M.Sc. in Computer Science - Technical University Darmstadt</h4>
+
+              <span>2018 — 2020</span>
+
+              <p class="timeline-text">
+                During my studies, I worked as a tutor for Net-Centric Systems and Visual Computing courses. This experience helped me to develop my teaching skills and improve my soft skills in professional communication. I took courses on formal specification and verification of software, Visual & Interactive Computing, and communication networks. I was recognized for my exceptional performance in Communication Networks. During my Master's degree, I conducted practical research on a self-built testbed, proving that the algorithm I developed for my Bachelor's thesis was effective on real hardware. This work led to the publication of my first paper under the supervision of the working group. Further, I have taken courses in economics and law. These include Bookkeeping, Human Resources Management, Basics of Economics, and many more. For my Master's thesis, I created a machine-learning approach for Multipath TCP schedulers generation. This approach showed its applicability and granted me the best possible grade.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Exchange Semester - Nihon University</h4>
+
+              <span>2018 — 2019</span>
+
+              <p class="timeline-text">
+                While at Nihon University, I worked in the lab of Professor Teruomi Katori. I worked with other students on a parking guidance system while conducting personal research. I took an intensive Japanese course at Nihon University. My stay in Japan and the fact that most students on the campus did not speak English allowed me to improve my Japanese ability vastly. With the help of the intensive Japanese course, I improved my Japanese to the JLPT N3 level. 
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">B.Sc. in Computer Science - Technical University Darmstadt</h4>
+
+              <span>2014 — 2018</span>
+
+              <p class="timeline-text">
+                While doing my Bachelor's degree, I worked at the university as a tutor for Net-Centric Systems and Compiler-building courses. This work helped me grow my teaching skills and improve my soft skills in communicating with other people professionally. Throughout my Bachelor's degree, I specialized in Computer Networks (especially wireless) and Machine Learning. I took courses on Mobile Networking and Artificial Intelligence, passed two practical Labs focusing on Networking and the Internet with the best possible grade, and passed an advanced seminar on Networking and Wireless Communications with the best possible grade. The Seminar topic and my prior interest in machine learning led to my Thesis, where I created an algorithm that would create TCP Congestion-Control algorithms through an evolutional machine learning approach. This work was a huge success, granted me the best possible grade, was nominated as the best Thesis in the Computer Science department, and led to further commitment during my Master's degree on this topic.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Apprenticeship to Chemical Technical Assistant - Peter-Behrens-Schule</h4>
+
+              <span>2011 — 2014</span>
+
+              <p class="timeline-text">
+                During your Chemical Technical Assistant (CTA) apprenticeship, I underwent comprehensive training combining classroom instruction and practical industry experience. In the academic portion of my apprenticeship, I studied a wide range of topics, such as organic and inorganic chemistry, physical chemistry, and analytical methods. In the practical portion, I applied the knowledge gained in the classroom to real-world situations, conducting chemical experiments and analyses, preparing chemical solutions, maintaining lab equipment, and adhering to necessary safety regulations. I also learned to interpret and report findings, contributing to chemical research and development. Through this experience, I have gained significant hands-on experience and developed a strong foundation in laboratory procedures and best practices, propelling you to be effective within pharmaceutical, chemical, and biochemistry industries. 
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Software Architect Lead - MoneyForward</h4>
+
+              <span>06/2023 — Present</span>
+
+              <p class="timeline-text">
+                As the Group Manager for the esteemed Architect Department at MoneyForward, I held a crucial position managing the architecture for the company's largest, most profitable product, Cloud Accounting. My core responsibility was overseeing the re-architecture of the Cloud Accounting system, which involved taking a holistic and forward-thinking approach to ensure continued product success. Simultaneously, I was also in charge of directing multiple projects, thus demonstrating strategic planning, team management, and project execution skills. Additionally, I initiated and conducted my projects within the department, further demonstrating my ability to innovate within the role. My tenure in this position showcased robust leadership, project management, and a deep understanding of the product as well as software architecture as a whole.
+                <br />
+                Used Techniques: Ruby, Ruby on Rails, Rspec, Selenium, React, Javascript, CoffeeScript, Github Actions, and many more.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Back-End Developer - MoneyForward</h4>
+
+              <span>12/2020 — 05/2023</span>
+
+              <p class="timeline-text">
+                In my tenure as a Back-end Engineer in the Cloud Accounting domain, I have significantly contributed to improving operational efficiency and overall product quality. I have demonstrated proficiency in creating and introducing APIs that have enhanced the back-end functionality of the product. My development initiatives significantly improved the back-end structure, driving greater product reliability and performance. I have consistently demonstrated my commitment to the role by being the first to respond to outages, successfully mitigating the impacts on the company's service offerings. Furthermore, I leveraged my adept problem-solving skills to complete multiple projects ahead of schedule without compromising quality, thereby ensuring exceptional customer satisfaction. Taking ownership and improving the product in various places of my own accord, like improving latency and response times by up to 95% and making API connections more robust, leading to better UX, has granted me the company's half-year MVP award. My role as a Back-end Engineer underscores my in-depth knowledge of cloud platforms, strong technical abilities, and proactive approach to problem-solving.
+                <br />
+                Used Techniques: Ruby, Ruby on Rails, Rspec, Selenium, Github Actions, and many more.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Fullstack Developer (Internship) - e.Ray</h4>
+
+              <span>11/2016 — 03/2017</span>
+
+              <p class="timeline-text">
+                During my intensive internship, I was responsible for the conception, development, and deployment of an innovative real-time web-based platform. The platform was specifically designed for owners of hydroelectric power plants created by e-Ray to obtain key operational metrics instantly. Leveraging advanced web development frameworks and languages, I created a cutting-edge and user-friendly interface that facilitated real-time tracking of power generation, water levels, and other vital variables. This technology effectively digitized and streamlined the monitoring process, making it more efficient and precise. Additionally, by promoting data-driven decision-making, the platform empowered plant owners to predict, plan, and optimize operations effectively, subsequently contributing to the overall reliability and resilience of the power network. As part of the development process, I collaborated closely with a multidisciplinary team of renewable energy experts, gaining invaluable insights into the energy sector's challenges and solutions, thus honing my problem-solving and team collaboration skills.
+                <br />
+                Used Techniques: React, Javascript, Firebase
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Publications</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <a class="h4 timeline-item-title" href="https://moneyforward-dev.jp/entry/2022/03/29/kibela-api-into-noteplan/">NotePlan Kibela Integration</a>
+
+              <span>03/2022 — MoneyForward Developers' Blog</span>
+            </li>
+
+            <li class="timeline-item">
+
+              <a class="h4 timeline-item-title" href="https://ieeexplore.ieee.org/document/9145446">NEAT-TCP: Generation of TCP Congestion Control through Neuroevolution of Augmenting Topologies</a>
+
+              <span>06/2020 - IEEE</span>
+
+              <p class="timeline-text">
+                Published in: <a class="timeline-text" href="https://ieeexplore.ieee.org/xpl/conhome/9138348/proceeding" >2020 IEEE International Conference on Communications Workshops (ICC Workshops)</a>
+              </p>
+
+            </li>
+
+            
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Qualifications</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">簿記検定３級 (Accounting Qualification in Japanese)</h4>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">English CEFR C1</h4>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">JLPT N2</h4>
+            </li>
+            
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Ruby/Ruby on Rails</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Javascript</h5>
+                <data value="60">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">HTML</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">React</h5>
+                <data value="40">40%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 40%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Go</h5>
+                <data value="40">40%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 40%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Java</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Networks</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Tools</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Networks</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Tools</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-portfolio-item data-category="networks">
+              <a href="https://github.com/kwallaschek/NEAT-TCP" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/neattcp.jpg" alt="neat" loading="lazy">
+                </figure>
+
+                <h3 class="project-title" data-portfolio-title>Neat-TCP</h3>
+
+                <p class="project-category">Networks</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-portfolio-item data-category="web development">
+              <a href="https://github.com/e-Ray/web_platform" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/eray.jpg" alt="eray" loading="lazy">
+                </figure>
+
+                <h3 class="project-title" data-portfolio-title>e.Ray Webplatform</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-portfolio-item data-category="networks">
+              <a href="https://github.com/kwallaschek/Meta-Scheduling" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/neattcp.jpg" alt="master-T" loading="lazy">
+                </figure>
+
+                <h3 class="project-title" data-portfolio-title>Meta-Scheduling for MultiPath TCP</h3>
+
+                <p class="project-category">Networks</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-portfolio-item data-category="networks">
+              <a href="https://github.com/kwallaschek/NEAT-TCP-Practical-Evaluation" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/plab.jpg" alt="plab" loading="lazy">
+                </figure>
+
+                <h3 class="project-title" data-portfolio-title>Practical Evaluation of Neat-TCP</h3>
+
+                <p class="project-category">Networks</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-portfolio-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/tk4.jpg" alt="plab-app" loading="lazy">
+                </figure>
+
+                <h3 class="project-title" data-portfolio-title>Social Li(f|v)e Tracking</h3>
+
+                <p class="project-category">Web Development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-portfolio-item data-category="tools">
+              <a href="https://github.com/kwallaschek/noteplan_kibela_integration" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/noteplan_kibela.jpg" alt="noteplan_kibela" loading="lazy">
+                </figure>
+
+                <h3 class="project-title" data-portfolio-title>NotePlan Kibela Integration</h3>
+
+                <p class="project-category">Tools</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-portfolio-item data-category="web development">
+              <a href="https://github.com/kwallaschek/Youtify" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/youtify.png" alt="youtify" loading="lazy">
+                </figure>
+
+                <h3 class="project-title" data-portfolio-title>Youtify - Spotify like player for youtube videos</h3>
+
+                <p class="project-category">Web Development</p>
+
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
+      </article>
+
+      <div class="modal-container" data-modal-container>
+
+        <div class="overlay" data-overlay></div>
+
+        <section class="portfolio-modal">
+
+          <button class="modal-close-btn" data-modal-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="modal-img-wrapper">
+            <figure class="modal-avatar-box">
+              
+            </figure>
+          </div>
+
+          <div class="modal-content">
+
+            <h4 class="h3 modal-title" data-modal-title></h4>
+            <div data-modal-text>
+              <p>
+              TODO
+              </p>
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
 </html>

@@ -18,17 +18,19 @@
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style-surprise.css">
 
   <!--
     - google font link
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <!-- Scanline effect -->
+  <div class="scanline"></div>
 
   <!--
     - #MAIN
@@ -51,7 +53,11 @@
         <div class="info-content">
           <h1 class="name" title="Kay">Kay Luis Wallaschek</h1>
 
-          <p class="title">Back-End Developer</p>
+          <div class="title-stack">
+            <p class="title">Back-End Developer</p>
+            <p class="title">Software Architect</p>
+            <p class="title">Engineering Manager</p>
+          </div>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -105,7 +111,7 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>Yokohama, Kanagawa, Japan</address>
+              <address>Shinagawa, Tokyo, Japan</address>
             </div>
 
           </li>
@@ -220,7 +226,7 @@
                 <h4 class="h4 service-item-title">Software Architecture</h4>
 
                 <p class="service-item-text">
-                  The most accurate and most fitting architecture design for any problem. From monolithic to microservices.
+                  The most accurate and most fitting architecture design for any problem. From monoliths to microservices.
                 </p>
               </div>
 
@@ -288,9 +294,25 @@
 
             <li class="timeline-item">
 
+              <h4 class="h4 timeline-item-title">Engineering Manager & Software Architect Lead - Money Forward</h4>
+
+              <span>12/2024 — Present</span>
+
+              <p class="timeline-text">
+                In my expanded role as Engineering Manager and Software Architect Lead, I have taken on comprehensive leadership responsibilities that span both technical architecture and people management. I currently manage a diverse team of approximately 30 engineers, including developers and QA professionals, fostering their growth while ensuring optimal team performance and collaboration. My architectural oversight extends across 10 distinct products and multiple critical services, where I am responsible for designing scalable, maintainable solutions that align with business objectives and technical excellence standards. This dual responsibility requires balancing strategic technical decision-making with effective people leadership, including mentoring team members, conducting performance evaluations, and driving cross-functional initiatives. My role demonstrates advanced leadership capabilities in both technical architecture and engineering management, positioning me as a key strategic contributor to the organization's technical direction and team development.
+                <br />
+                Management Focus: Team Leadership, Performance Management, Cross-functional Collaboration, Technical Mentoring, Strategic Planning.
+                <br />
+                Architecture Focus: Multi-product Architecture, Service Design, Scalability Planning, Technical Standards, System Integration.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
               <h4 class="h4 timeline-item-title">Software Architect Lead - Money Forward</h4>
 
-              <span>06/2023 — Present</span>
+              <span>06/2023 — 11/2024</span>
 
               <p class="timeline-text">
                 As the Group Manager for the esteemed Architect Department at Money Forward, I hold a crucial position managing the architecture for the company's largest, most profitable product, Cloud Accounting. My core responsibility is to oversee the re-architecture of the Cloud Accounting system, which involves taking a holistic and forward-thinking approach to ensure continued product success. Simultaneously, I am also in charge of directing multiple projects, thus demonstrating strategic planning, team management, and project execution skills. Additionally, I initiated and am conducting my projects within the department, further demonstrating my ability to innovate within the role. My tenure in this position showcases robust leadership, project management, and a deep understanding of the product as well as software architecture as a whole.
@@ -460,93 +482,6 @@
 
         </section>
 
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Ruby/Ruby on Rails</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Javascript</h5>
-                <data value="60">60%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">HTML</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">React</h5>
-                <data value="40">40%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 40%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Go</h5>
-                <data value="40">40%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 40%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Java</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
 
       </article>
 
@@ -755,7 +690,6 @@
         <section class="portfolio-modal">
 
           <button class="modal-close-btn" data-modal-close-btn>
-            <ion-icon name="close-outline"></ion-icon>
           </button>
 
           <div class="modal-img-wrapper">
@@ -768,9 +702,6 @@
 
             <h4 class="h3 modal-title" data-modal-title></h4>
             <div data-modal-text>
-              <p>
-              TODO
-              </p>
             </div>
 
           </div>

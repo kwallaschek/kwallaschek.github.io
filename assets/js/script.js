@@ -33,22 +33,6 @@ const portfolioModalFunc = function () {
   overlay.classList.toggle("active");
 }
 
-// add click event to all modal items
-// for (let i = 0; i < portfolioItem.length; i++) {
-
-//   portfolioItem[i].addEventListener("click", function () {
-
-//     // modalImg.src = this.querySelector("[data-portfolio-avatar]").src;
-//     // modalImg.alt = this.querySelector("[data-portfolio-avatar]").alt;
-//     // modalTitle.innerHTML = this.querySelector("[data-portfolio-title]").innerHTML;
-//     // modalText.innerHTML = this.querySelector("[data-portfolio-text]").innerHTML;
-
-//     modalTitle.innerHTML = this.querySelector("[data-portfolio-title]").innerHTML;
-
-//     portfolioModalFunc();
-//   });
-
-// }
 
 // add click event to modal close button
 modalCloseBtn.addEventListener("click", portfolioModalFunc);
@@ -59,7 +43,7 @@ overlay.addEventListener("click", portfolioModalFunc);
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
+const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
 select.addEventListener("click", function () { elementToggleFunc(this); });

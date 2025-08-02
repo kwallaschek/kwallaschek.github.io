@@ -36,6 +36,38 @@
     - #MAIN
   -->
 
+  <!-- Theme Switcher - Fixed Position -->
+  <div class="theme-switcher-fixed">
+    <button class="theme-switcher-btn" id="themeSwitcher">
+      <ion-icon name="color-palette-outline" class="theme-icon"></ion-icon>
+      <span class="theme-text">Switch Theme</span>
+      <ion-icon name="chevron-down-outline" class="dropdown-icon"></ion-icon>
+    </button>
+    <div class="theme-dropdown" id="themeDropdown">
+      <div class="theme-option active" data-theme="neo-tokyo">
+        <div class="theme-preview neo-tokyo-preview"></div>
+        <span>Terminal</span>
+        <ion-icon name="checkmark-outline" class="checkmark"></ion-icon>
+      </div>
+      <div class="theme-option" data-theme="minimalist">
+        <div class="theme-preview minimalist-preview"></div>
+        <span>Minimalistic</span>
+        <ion-icon name="checkmark-outline" class="checkmark"></ion-icon>
+      </div>
+      <div class="theme-option" data-theme="original">
+        <div class="theme-preview original-preview"></div>
+        <span>Classic Professional</span>
+        <ion-icon name="checkmark-outline" class="checkmark"></ion-icon>
+      </div>
+    </div>
+    
+    <!-- Theme Prompt Animation -->
+    <div class="theme-prompt" id="themePrompt">
+      <div class="theme-prompt-arrow"></div>
+      <div class="theme-prompt-text">Try out other themes</div>
+    </div>
+  </div>
+
   <main>
 
     <!--

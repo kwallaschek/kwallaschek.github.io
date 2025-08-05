@@ -1886,11 +1886,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   #THEME SWITCHER - Original Design
 \*-----------------------------------*/
 
-.theme-switcher-fixed {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
+.theme-switcher-nav {
+  position: relative;
+  margin-left: auto;
 }
 
 .theme-switcher-btn {
@@ -1909,15 +1907,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   box-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.15);
 }
 
-.theme-switcher-btn:hover {
+.theme-switcher-btn:hover,
+.theme-switcher-btn.active {
   background: hsl(240, 2%, 16%);
   border-color: hsl(45, 100%, 72%);
   box-shadow: 0 0 0 1px hsla(45, 100%, 72%, 0.25);
-  transform: translateY(-1px);
-}
-
-.theme-switcher-btn:active {
-  transform: translateY(0);
 }
 
 .theme-icon {

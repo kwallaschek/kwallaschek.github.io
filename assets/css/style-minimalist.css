@@ -715,11 +715,9 @@ article.active {
   #THEME SWITCHER - Minimalist Design
 \*-----------------------------------*/
 
-.theme-switcher-fixed {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
+.theme-switcher-nav {
+  position: relative;
+  margin-left: auto;
 }
 
 .theme-switcher-btn {
@@ -739,16 +737,11 @@ article.active {
   box-shadow: var(--shadow-sm);
 }
 
-.theme-switcher-btn:hover {
+.theme-switcher-btn:hover,
+.theme-switcher-btn.active {
   background: var(--gray-50);
   border-color: var(--gray-400);
   box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
-}
-
-.theme-switcher-btn:active {
-  transform: translateY(0);
-  box-shadow: var(--shadow-sm);
 }
 
 .theme-icon {

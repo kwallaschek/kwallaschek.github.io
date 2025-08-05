@@ -1311,56 +1311,43 @@ body > .scanline {
   #THEME SWITCHER
 \*-----------------------------------*/
 
-.theme-switcher-fixed {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
+.theme-switcher-nav {
+  position: relative;
+  margin-left: auto;
 }
 
 .theme-switcher-btn {
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  padding: var(--space-3) var(--space-4);
-  background: var(--bg-card);
-  border: var(--border-terminal);
-  border-radius: 4px;
-  color: var(--text-primary);
-  font-family: var(--ff-mono);
   font-size: var(--fs-sm);
-  cursor: pointer;
-  transition: all var(--transition-base);
+  color: var(--text-secondary);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  background: var(--bg-card);
+  transition: var(--transition-base);
   position: relative;
-  overflow: hidden;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .theme-switcher-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    rgba(0, 255, 65, 0.1) 50%, 
-    transparent 100%);
-  transition: left 0.3s ease;
+  content: '⚙ ';
+  opacity: 0;
+  transition: var(--transition-base);
 }
 
-.theme-switcher-btn:hover::before {
-  left: 100%;
+.theme-switcher-btn:hover,
+.theme-switcher-btn.active {
+  color: var(--text-primary);
+  border-color: var(--terminal-green);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+  background: var(--bg-glow);
 }
 
-.theme-switcher-btn:hover {
-  border-color: var(--neon-cyan);
-  box-shadow: var(--border-glow);
-  transform: translateY(-1px);
-}
-
-.theme-switcher-btn:active {
-  transform: translateY(0);
+.theme-switcher-btn:hover::before,
+.theme-switcher-btn.active::before {
+  opacity: 1;
 }
 
 .theme-icon {

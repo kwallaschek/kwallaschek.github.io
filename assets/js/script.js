@@ -171,8 +171,8 @@ const themes = {
   }
 };
 
-// Initialize theme from localStorage or default to neo-tokyo
-let currentTheme = localStorage.getItem('portfolio-theme') || 'neo-tokyo';
+// Initialize theme from localStorage or default to minimalist
+let currentTheme = localStorage.getItem('portfolio-theme') || 'minimalist';
 
 // Theme prompt variables
 let promptTimeout;

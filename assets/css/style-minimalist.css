@@ -358,57 +358,6 @@ article.active {
   margin-bottom: var(--space-4);
 }
 
-/* Services */
-.service {
-  margin-bottom: var(--space-8);
-}
-
-.service-title {
-  font-size: var(--fs-2xl);
-  font-weight: var(--fw-semibold);
-  margin-bottom: var(--space-4);
-}
-
-.service-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-6);
-}
-
-.service-item {
-  padding: var(--space-4);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-lg);
-  transition: var(--transition-base);
-}
-
-.service-item:hover {
-  border-color: var(--gray-300);
-  box-shadow: var(--shadow-md);
-}
-
-.service-icon-box {
-  width: 48px;
-  height: 48px;
-  margin-bottom: var(--space-3);
-  border-radius: var(--radius-md);
-  background: var(--gray-100);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.service-item-title {
-  font-size: var(--fs-xl);
-  font-weight: var(--fw-semibold);
-  margin-bottom: var(--space-2);
-}
-
-.service-item-text {
-  color: var(--gray-600);
-  line-height: 1.6;
-}
-
 /*-----------------------------------*\
   #RESUME SECTION
 \*-----------------------------------*/
@@ -584,10 +533,6 @@ article.active {
   
   .about-text {
     font-size: var(--fs-base);
-  }
-  
-  .service-list {
-    grid-template-columns: 1fr;
   }
   
   .timeline-list {

@@ -42,10 +42,10 @@ Plans:
   2. Tab navigation between About, Resume, and Portfolio works correctly
   3. Portfolio project filtering works correctly (clicking filter buttons shows/hides items)
   4. The site is usable and correctly laid out on a mobile viewport
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 02-01: Manual verification across navigation, filtering, and mobile layout
+- [ ] 02-01-PLAN.md — Automated and visual verification of site functionality (navigation, filtering, mobile layout)
 
 ## Progress
 

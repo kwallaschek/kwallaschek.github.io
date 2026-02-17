@@ -12,7 +12,7 @@ Two-phase cleanup: strip all theme infrastructure from the portfolio, then verif
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Simplify** - Remove all theme infrastructure from the codebase
+- [x] **Phase 1: Simplify** - Remove all theme infrastructure from the codebase (completed 2026-02-17)
 - [ ] **Phase 2: Verify** - Confirm the site works correctly after simplification
 
 ## Phase Details
@@ -54,5 +54,5 @@ Phases execute in numeric order: 1 → 2
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Simplify | 0/2 | Not started | - |
+| 1. Simplify | 0/2 | Complete    | 2026-02-17 |
 | 2. Verify | 0/1 | Not started | - |

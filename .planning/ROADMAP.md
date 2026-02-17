@@ -27,12 +27,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Only Inter is loaded from Google Fonts (Share Tech Mono, Poppins, JetBrains Mono are gone)
   4. index.html links to style-minimalist.css as its sole stylesheet
   5. The repository contains no alternative CSS or HTML theme files
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: Strip theme switcher UI and font references from index.html, update stylesheet link
-- [ ] 01-02: Remove theme-switching logic and localStorage code from script.js
-- [ ] 01-03: Delete alternative theme CSS and HTML files
+- [ ] 01-01-PLAN.md — Strip theme switcher UI, font refs, and switching logic from index.html and script.js
+- [ ] 01-02-PLAN.md — Delete alternative theme CSS and HTML files
 
 ### Phase 2: Verify
 **Goal**: The portfolio is fully functional with the minimalist theme and no regressions from the cleanup
@@ -55,5 +54,5 @@ Phases execute in numeric order: 1 → 2
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Simplify | 0/3 | Not started | - |
+| 1. Simplify | 0/2 | Not started | - |
 | 2. Verify | 0/1 | Not started | - |

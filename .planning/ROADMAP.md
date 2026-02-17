@@ -56,3 +56,19 @@ Phases execute in numeric order: 1 → 2
 |-------|----------------|--------|-----------|
 | 1. Simplify | 0/2 | Complete    | 2026-02-17 |
 | 2. Verify | 0/1 | Not started | - |
+
+### Phase 3: Also remove the portfolio tab with all relevant code and assets
+
+**Goal**: The site has only About and Resume tabs — no portfolio navigation, content, filtering JS, portfolio CSS, modal overlay, or project images remain
+**Depends on:** Phase 2
+**Requirements**: PTAB-01, PTAB-02, PTAB-03, PTAB-04, PTAB-05
+**Success Criteria** (what must be TRUE):
+  1. The navbar contains only About and Resume buttons — no Portfolio tab
+  2. No portfolio article, filter UI, or modal overlay exists in index.html
+  3. script.js contains only sidebar toggle and page navigation — no filter, modal, or dead form code
+  4. style-minimalist.css has no .filter-*, .project-*, or .theme-switcher-* rules
+  5. Portfolio project images (6 files) are deleted from assets/images/
+**Plans:** 1 plan
+
+Plans:
+- [ ] 03-01-PLAN.md — Strip portfolio tab, HTML, JS, CSS, and delete project images

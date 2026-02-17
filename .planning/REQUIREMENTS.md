@@ -46,23 +46,23 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| THRM-01 | — | Pending |
-| THRM-02 | — | Pending |
-| THRM-03 | — | Pending |
-| THRM-04 | — | Pending |
-| FLCL-01 | — | Pending |
-| FLCL-02 | — | Pending |
-| FLCL-03 | — | Pending |
-| VERF-01 | — | Pending |
-| VERF-02 | — | Pending |
-| VERF-03 | — | Pending |
-| VERF-04 | — | Pending |
+| THRM-01 | Phase 1 | Pending |
+| THRM-02 | Phase 1 | Pending |
+| THRM-03 | Phase 1 | Pending |
+| THRM-04 | Phase 1 | Pending |
+| FLCL-01 | Phase 1 | Pending |
+| FLCL-02 | Phase 1 | Pending |
+| FLCL-03 | Phase 1 | Pending |
+| VERF-01 | Phase 2 | Pending |
+| VERF-02 | Phase 2 | Pending |
+| VERF-03 | Phase 2 | Pending |
+| VERF-04 | Phase 2 | Pending |
 
 **Coverage:**
 - v1 requirements: 11 total
-- Mapped to phases: 0
-- Unmapped: 11
+- Mapped to phases: 11
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-17*
-*Last updated: 2026-02-17 after initial definition*
+*Last updated: 2026-02-17 after roadmap creation*

@@ -1,457 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="Kay Luis Wallaschek, Kay Wallaschek, ドイツ, 情報科学卒, kl-w, kl-w.de, kl-w.com, kl-w.co.jp, kl-w.jp, TU-Darmstadt, Technische Universität Darmstadt, Technical University Darmstadt, Darmstadt 工科大学, Engineer, Back-end Engineer, Software Architect, Portfolio, Ruby, Rails, Rails Engineer, Ruby on Rails Engineer" />
-	<meta name="author" content="Kay Luis Wallaschek" />
-  <meta name="description" content="Kay Luis Wallaschek - Personal Portfolio" />
+  <meta name="author" content="Kay Luis Wallaschek">
+  <meta name="description" content="Kay Luis Wallaschek - Personal Portfolio">
+  <meta name="keywords" content="Kay Luis Wallaschek, Kay Wallaschek, ドイツ, 情報科学卒, kl-w, kl-w.de, kl-w.com, kl-w.co.jp, kl-w.jp, TU-Darmstadt, Technische Universität Darmstadt, Technical University Darmstadt, Darmstadt 工科大学, Engineer, Back-end Engineer, Software Architect, Portfolio, Ruby, Rails, Rails Engineer, Ruby on Rails Engineer">
   <title>Kay Luis Wallaschek - Personal Portfolio</title>
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style-minimalist.css">
-
-  <!--
-    - google font link
-  -->
+  <link rel="icon" href="assets/images/logo.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-
-  <!--
-    - #MAIN
-  -->
-
-
   <main>
 
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar_3.png" alt="Kay Luis Wallaschek" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Kay">Kay Luis Wallaschek</h1>
-
-          <div class="title-stack">
-            <p class="title">Back-End Developer</p>
-            <p class="title">Software Architect</p>
-            <p class="title">Engineering Manager</p>
-          </div>
+    <aside>
+      <header class="profile">
+        <img class="avatar" src="assets/images/avatar.png" alt="Kay Luis Wallaschek" width="120" height="120">
+        <div>
+          <h1 class="name">Kay Luis Wallaschek</h1>
+          <p class="titles">
+            <span>Back-End Developer</span>
+            <span>Software Architect</span>
+            <span>Engineering Manager</span>
+          </p>
         </div>
+      </header>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+      <dl class="contacts">
+        <div>
+          <dt>Email</dt>
+          <dd><a href="mailto:kayluis.wallaschek@gmail.com">kayluis.wallaschek@gmail.com</a></dd>
+        </div>
+        <div>
+          <dt>Birthday</dt>
+          <dd><time datetime="1994-11-01">November 1, 1994</time></dd>
+        </div>
+        <div>
+          <dt>Location</dt>
+          <dd>Shinagawa, Tokyo, Japan</dd>
+        </div>
+      </dl>
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:kayluis.wallaschek@gmail.com" class="contact-link">kayluis.wallaschek@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1994-11-01">November 1, 1994</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Shinagawa, Tokyo, Japan</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://github.com/kwallaschek" target="_blank" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/kay-luis-wallaschek-195396188/" target="_blank" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="mailto:kayluis.wallaschek@gmail.com" class="social-link">
-              <ion-icon name="mail"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
+      <ul class="social">
+        <li>
+          <a href="https://github.com/kwallaschek" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/kay-luis-wallaschek-195396188/" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:kayluis.wallaschek@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M424 80H88a56.06 56.06 0 00-56 56v240a56.06 56.06 0 0056 56h336a56.06 56.06 0 0056-56V136a56.06 56.06 0 00-56-56zm-14.18 92.63l-144 112a16 16 0 01-19.64 0l-144-112a16 16 0 1119.64-25.26L256 251.73l134.18-104.36a16 16 0 0119.64 25.26z"/></svg>
+          </a>
+        </li>
+      </ul>
     </aside>
 
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-        </ul>
-
+    <div>
+      <nav>
+        <button class="active" data-tab="about">About</button>
+        <button data-tab="resume">Resume</button>
       </nav>
 
-      <!--
-        - #ABOUT
-      -->
+      <article class="about active" data-page="about">
+        <h2>About me</h2>
 
-      <article class="about  active" data-page="about">
+        <p>
+          I'm Kay, a Software Architect and Engineering Manager based in Tokyo. Originally from Germany, I made the move to Japan in 2020, bringing with me a Master's in Computer Science from Technical University Darmstadt and a passion for building robust systems. What started as an opportunity to experience a new culture became the foundation for the most exciting phase of my career.
+        </p>
 
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
+        <p>
+          My technical journey began in backend development, where I cut my teeth on everything from API design to database optimization. Working with technologies like Ruby on Rails, React, and various cloud platforms, I quickly discovered that my real interest lay not just in writing code, but in understanding how different pieces of a system work together. This naturally led me toward software architecture, where I could focus on the bigger picture—designing systems that are not only functional but scalable, maintainable, and resilient.
+        </p>
 
-        <section class="about-text">
-          <p>
-            I'm Kay, a Software Architect and Engineering Manager based in Tokyo. Originally from Germany, I made the move to Japan in 2020, bringing with me a Master's in Computer Science from Technical University Darmstadt and a passion for building robust systems. What started as an opportunity to experience a new culture became the foundation for the most exciting phase of my career.
-          </p>
+        <p>
+          Currently, I manage 30+ engineers across 10+ products at Money Forward, where I focus on architectural decisions that drive both performance and reliability. This role has taught me that great architecture isn't just about technical elegance—it's about understanding business needs, team capabilities, and long-term maintainability. Whether we're re-architecting our largest product, Cloud Accounting, or launching new services, my approach remains consistent: find the right tool for the job and build solutions that last.
+        </p>
 
-          <p>
-            My technical journey began in backend development, where I cut my teeth on everything from API design to database optimization. Working with technologies like Ruby on Rails, React, and various cloud platforms, I quickly discovered that my real interest lay not just in writing code, but in understanding how different pieces of a system work together. This naturally led me toward software architecture, where I could focus on the bigger picture—designing systems that are not only functional but scalable, maintainable, and resilient.
-          </p>
+        <p>
+          What drives my decision-making is a simple philosophy: every architectural choice should solve real problems, not create new ones. I believe in pragmatic solutions over perfect ones, and I'm always weighing trade-offs between performance, complexity, and development velocity. When faced with technical challenges, I focus on understanding the root cause before jumping to solutions, and I'm not afraid to question existing assumptions about how things "should" work.
+        </p>
 
-          <p>
-            Currently, I manage 30+ engineers across 10+ products at Money Forward, where I focus on architectural decisions that drive both performance and reliability. This role has taught me that great architecture isn't just about technical elegance—it's about understanding business needs, team capabilities, and long-term maintainability. Whether we're re-architecting our largest product, Cloud Accounting, or launching new services, my approach remains consistent: find the right tool for the job and build solutions that last.
-          </p>
+        <p>
+          What I find most rewarding is building teams and mentoring engineers. There's something deeply satisfying about watching someone grow from junior developer to technical leader, and I believe that investing in people is just as important as investing in technology.
+        </p>
 
-          <p>
-            What drives my decision-making is a simple philosophy: every architectural choice should solve real problems, not create new ones. I believe in pragmatic solutions over perfect ones, and I'm always weighing trade-offs between performance, complexity, and development velocity. When faced with technical challenges, I focus on understanding the root cause before jumping to solutions, and I'm not afraid to question existing assumptions about how things "should" work.
-          </p>
+        <p>
+          As an Engineering Manager, I've learned that successful teams are built on trust, clear communication, and shared ownership of outcomes. I focus on creating environments where engineers can do their best work, whether that's removing blockers, facilitating cross-team collaboration, or simply making sure everyone understands how their work contributes to the bigger picture. Leading 30+ people across multiple products has reinforced my belief that good leadership is about empowering others, not micromanaging them.
+        </p>
 
-          <p>
-            What I find most rewarding is building teams and mentoring engineers. There's something deeply satisfying about watching someone grow from junior developer to technical leader, and I believe that investing in people is just as important as investing in technology.
-          </p>
+        <p>
+          Looking ahead, I'm excited about the evolving landscape of software architecture, from microservices and cloud-native approaches to the challenges of scaling both systems and teams. I'm constantly learning—whether it's new technologies, leadership techniques, or better ways to balance technical debt with feature development. The tech industry moves fast, and staying curious is the best way to stay relevant.
+        </p>
 
-          <p>
-            As an Engineering Manager, I've learned that successful teams are built on trust, clear communication, and shared ownership of outcomes. I focus on creating environments where engineers can do their best work, whether that's removing blockers, facilitating cross-team collaboration, or simply making sure everyone understands how their work contributes to the bigger picture. Leading 30+ people across multiple products has reinforced my belief that good leadership is about empowering others, not micromanaging them.
-          </p>
-
-          <p>
-            Looking ahead, I'm excited about the evolving landscape of software architecture, from microservices and cloud-native approaches to the challenges of scaling both systems and teams. I'm constantly learning—whether it's new technologies, leadership techniques, or better ways to balance technical debt with feature development. The tech industry moves fast, and staying curious is the best way to stay relevant.
-          </p>
-
-          <p>
-            I thrive on complex technical challenges and turning abstract problems into concrete, efficient systems. Whether you're looking to scale your architecture, build high-performing teams, or tackle challenging technical problems, I'd love to discuss how I can contribute to your next project.
-          </p>
-        </section>
-
+        <p>
+          I thrive on complex technical challenges and turning abstract problems into concrete, efficient systems. Whether you're looking to scale your architecture, build high-performing teams, or tackle challenging technical problems, I'd love to discuss how I can contribute to your next project.
+        </p>
       </article>
 
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
+      <article data-page="resume">
+        <h2>Resume</h2>
 
         <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Engineering Manager & Software Architect Lead - Money Forward</h4>
-
-              <span>12/2024 — Present</span>
-
-              <p class="timeline-text">
+          <h3>Experience</h3>
+          <ol>
+            <li>
+              <h4>Engineering Manager & Software Architect Lead - Money Forward</h4>
+              <span class="meta">12/2024 — Present</span>
+              <p>
                 In my expanded role as Engineering Manager and Software Architect Lead, I have taken on comprehensive leadership responsibilities that span both technical architecture and people management. I currently manage a diverse team of approximately 30 engineers, including developers and QA professionals, fostering their growth while ensuring optimal team performance and collaboration. My architectural oversight extends across 10 distinct products and multiple critical services, where I am responsible for designing scalable, maintainable solutions that align with business objectives and technical excellence standards. This dual responsibility requires balancing strategic technical decision-making with effective people leadership, including mentoring team members, conducting performance evaluations, and driving cross-functional initiatives. My role demonstrates advanced leadership capabilities in both technical architecture and engineering management, positioning me as a key strategic contributor to the organization's technical direction and team development.
-                <br />
+                <br>
                 Management Focus: Team Leadership, Performance Management, Cross-functional Collaboration, Technical Mentoring, Strategic Planning.
-                <br />
+                <br>
                 Architecture Focus: Multi-product Architecture, Service Design, Scalability Planning, Technical Standards, System Integration.
               </p>
-
             </li>
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Software Architect Lead - Money Forward</h4>
-
-              <span>06/2023 — 11/2024</span>
-
-              <p class="timeline-text">
+            <li>
+              <h4>Software Architect Lead - Money Forward</h4>
+              <span class="meta">06/2023 — 11/2024</span>
+              <p>
                 As the Group Manager for the esteemed Architect Department at Money Forward, I hold a crucial position managing the architecture for the company's largest, most profitable product, Cloud Accounting. My core responsibility is to oversee the re-architecture of the Cloud Accounting system, which involves taking a holistic and forward-thinking approach to ensure continued product success. Simultaneously, I am also in charge of directing multiple projects, thus demonstrating strategic planning, team management, and project execution skills. Additionally, I initiated and am conducting my projects within the department, further demonstrating my ability to innovate within the role. My tenure in this position showcases robust leadership, project management, and a deep understanding of the product as well as software architecture as a whole.
-                <br />
+                <br>
                 Used Techniques: Ruby, Ruby on Rails, Rspec, Selenium, React, Javascript, CoffeeScript, Github Actions, and many more.
               </p>
-
             </li>
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Back-End Developer - Money Forward</h4>
-
-              <span>12/2020 — 05/2023</span>
-
-              <p class="timeline-text">
+            <li>
+              <h4>Back-End Developer - Money Forward</h4>
+              <span class="meta">12/2020 — 05/2023</span>
+              <p>
                 In my tenure as a Back-end Engineer in the Cloud Accounting domain, I have significantly contributed to improving operational efficiency and overall product quality. I have demonstrated proficiency in creating and introducing APIs that have enhanced the back-end functionality of the product. My development initiatives significantly improved the back-end structure, driving greater product reliability and performance. I have consistently demonstrated my commitment to the role by being the first to respond to outages, successfully mitigating the impacts on the company's service offerings. Furthermore, I leveraged my adept problem-solving skills to complete multiple projects ahead of schedule without compromising quality, thereby ensuring exceptional customer satisfaction. Taking ownership and improving the product in various places of my own accord, like improving latency and response times by up to 95% and making API connections more robust, leading to better UX, has granted me the company's half-year MVP award. My role as a Back-end Engineer underscores my in-depth knowledge of cloud platforms, strong technical abilities, and proactive approach to problem-solving.
-                <br />
+                <br>
                 Used Techniques: Ruby, Ruby on Rails, Rspec, Selenium, Github Actions, and many more.
               </p>
-
             </li>
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Fullstack Developer (Internship) - e.Ray</h4>
-
-              <span>11/2016 — 03/2017</span>
-
-              <p class="timeline-text">
+            <li>
+              <h4>Fullstack Developer (Internship) - e.Ray</h4>
+              <span class="meta">11/2016 — 03/2017</span>
+              <p>
                 During my intensive internship, I was responsible for the conception, development, and deployment of an innovative real-time web-based platform. The platform was specifically designed for owners of hydroelectric power plants created by e-Ray to obtain key operational metrics instantly. Leveraging advanced web development frameworks and languages, I created a cutting-edge and user-friendly interface that facilitated real-time tracking of power generation, water levels, and other vital variables. This technology effectively digitized and streamlined the monitoring process, making it more efficient and precise. Additionally, by promoting data-driven decision-making, the platform empowered plant owners to predict, plan, and optimize operations effectively, subsequently contributing to the overall reliability and resilience of the power network. As part of the development process, I collaborated closely with a multidisciplinary team of renewable energy experts, gaining invaluable insights into the energy sector's challenges and solutions, thus honing my problem-solving and team collaboration skills.
-                <br />
+                <br>
                 Used Techniques: React, Javascript, Firebase
               </p>
-
             </li>
-
           </ol>
-
         </section>
 
         <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">M.Sc. in Computer Science - Technical University Darmstadt</h4>
-
-              <span>2018 — 2020</span>
-
-              <p class="timeline-text">
+          <h3>Education</h3>
+          <ol>
+            <li>
+              <h4>M.Sc. in Computer Science - Technical University Darmstadt</h4>
+              <span class="meta">2018 — 2020</span>
+              <p>
                 During my studies, I worked as a tutor for Net-Centric Systems and Visual Computing courses. This experience helped me to develop my teaching skills and improve my soft skills in professional communication. I took courses on formal specification and verification of software, Visual & Interactive Computing, and communication networks. I was recognized for my exceptional performance in Communication Networks. During my Master's degree, I conducted practical research on a self-built testbed, proving that the algorithm I developed for my Bachelor's thesis was effective on real hardware. This work led to the publication of my first paper under the supervision of the working group. Further, I have taken courses in economics and law. These include Bookkeeping, Human Resources Management, Basics of Economics, and many more. For my Master's thesis, I created a machine-learning approach for Multipath TCP schedulers generation. This approach showed its applicability and granted me the best possible grade.
               </p>
-
             </li>
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Exchange Semester - Nihon University</h4>
-
-              <span>2018 — 2019</span>
-
-              <p class="timeline-text">
+            <li>
+              <h4>Exchange Semester - Nihon University</h4>
+              <span class="meta">2018 — 2019</span>
+              <p>
                 While at Nihon University, I worked in the lab of Professor Teruomi Katori. I worked with other students on a parking guidance system while conducting personal research. I took an intensive Japanese course at Nihon University. My stay in Japan and the fact that most students on the campus did not speak English allowed me to improve my Japanese ability vastly. With the help of the intensive Japanese course, I improved my Japanese to the JLPT N3 level.
               </p>
-
             </li>
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">B.Sc. in Computer Science - Technical University Darmstadt</h4>
-
-              <span>2014 — 2018</span>
-
-              <p class="timeline-text">
+            <li>
+              <h4>B.Sc. in Computer Science - Technical University Darmstadt</h4>
+              <span class="meta">2014 — 2018</span>
+              <p>
                 While doing my Bachelor's degree, I worked at the university as a tutor for Net-Centric Systems and Compiler-building courses. This work helped me grow my teaching skills and improve my soft skills in communicating with other people professionally. Throughout my Bachelor's degree, I specialized in Computer Networks (especially wireless) and Machine Learning. I took courses on Mobile Networking and Artificial Intelligence, passed two practical Labs focusing on Networking and the Internet with the best possible grade, and passed an advanced seminar on Networking and Wireless Communications with the best possible grade. The Seminar topic and my prior interest in machine learning led to my Thesis, where I created an algorithm that would create TCP Congestion-Control algorithms through an evolutional machine learning approach. This work was a huge success, granted me the best possible grade, was nominated as the best Thesis in the Computer Science department, and led to further commitment during my Master's degree on this topic.
               </p>
-
             </li>
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Apprenticeship to Chemical Technical Assistant - Peter-Behrens-Schule</h4>
-
-              <span>2011 — 2014</span>
-
-              <p class="timeline-text">
-                During your Chemical Technical Assistant (CTA) apprenticeship, I underwent comprehensive training combining classroom instruction and practical industry experience. In the academic portion of my apprenticeship, I studied a wide range of topics, such as organic and inorganic chemistry, physical chemistry, and analytical methods. In the practical portion, I applied the knowledge gained in the classroom to real-world situations, conducting chemical experiments and analyses, preparing chemical solutions, maintaining lab equipment, and adhering to necessary safety regulations. I also learned to interpret and report findings, contributing to chemical research and development. Through this experience, I have gained significant hands-on experience and developed a strong foundation in laboratory procedures and best practices, propelling you to be effective within pharmaceutical, chemical, and biochemistry industries.
+            <li>
+              <h4>Apprenticeship to Chemical Technical Assistant - Peter-Behrens-Schule</h4>
+              <span class="meta">2011 — 2014</span>
+              <p>
+                During my Chemical Technical Assistant (CTA) apprenticeship, I underwent comprehensive training combining classroom instruction and practical industry experience. In the academic portion of my apprenticeship, I studied a wide range of topics, such as organic and inorganic chemistry, physical chemistry, and analytical methods. In the practical portion, I applied the knowledge gained in the classroom to real-world situations, conducting chemical experiments and analyses, preparing chemical solutions, maintaining lab equipment, and adhering to necessary safety regulations. I also learned to interpret and report findings, contributing to chemical research and development. Through this experience, I have gained significant hands-on experience and developed a strong foundation in laboratory procedures and best practices, propelling me to be effective within pharmaceutical, chemical, and biochemistry industries.
               </p>
-
             </li>
-
           </ol>
-
         </section>
 
         <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Publications</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <a class="h4 timeline-item-title" href="https://moneyforward-dev.jp/entry/2022/03/29/kibela-api-into-noteplan/">NotePlan Kibela Integration</a>
-
-              <span>03/2022 — Money Forward Developers' Blog</span>
+          <h3>Publications</h3>
+          <ol>
+            <li>
+              <h4><a href="https://moneyforward-dev.jp/entry/2022/03/29/kibela-api-into-noteplan/">NotePlan Kibela Integration</a></h4>
+              <span class="meta">03/2022 — Money Forward Developers' Blog</span>
             </li>
 
-            <li class="timeline-item">
-
-              <a class="h4 timeline-item-title" href="https://ieeexplore.ieee.org/document/9145446">NEAT-TCP: Generation of TCP Congestion Control through Neuroevolution of Augmenting Topologies</a>
-
-              <span>06/2020 - IEEE</span>
-
-              <p class="timeline-text">
-                Published in: <a class="timeline-text" href="https://ieeexplore.ieee.org/xpl/conhome/9138348/proceeding" >2020 IEEE International Conference on Communications Workshops (ICC Workshops)</a>
+            <li>
+              <h4><a href="https://ieeexplore.ieee.org/document/9145446">NEAT-TCP: Generation of TCP Congestion Control through Neuroevolution of Augmenting Topologies</a></h4>
+              <span class="meta">06/2020 — IEEE</span>
+              <p>
+                Published in: <a href="https://ieeexplore.ieee.org/xpl/conhome/9138348/proceeding">2020 IEEE International Conference on Communications Workshops (ICC Workshops)</a>
               </p>
-
             </li>
-
-
           </ol>
-
         </section>
 
         <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Qualifications</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">簿記検定３級 (Accounting Qualification in Japanese)</h4>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">English CEFR C1</h4>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">JLPT N2</h4>
-            </li>
-
+          <h3>Qualifications</h3>
+          <ol>
+            <li><h4>簿記検定３級 (Accounting Qualification in Japanese)</h4></li>
+            <li><h4>English CEFR C1</h4></li>
+            <li><h4>JLPT N2</h4></li>
           </ol>
-
         </section>
-
-
       </article>
-
     </div>
 
   </main>
 
+  <script>
+    const tabs = document.querySelectorAll('[data-tab]');
+    const pages = document.querySelectorAll('[data-page]');
 
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((t) => t.classList.toggle('active', t === tab));
+        pages.forEach((page) => page.classList.toggle('active', page.dataset.page === tab.dataset.tab));
+        window.scrollTo(0, 0);
+      });
+    });
+  </script>
 </body>
-
 </html>

@@ -62,6 +62,8 @@
           </a>
         </li>
       </ul>
+
+      <ul class="posts"></ul>
     </aside>
 
     <div>
@@ -217,13 +219,7 @@
         </section>
       </article>
 
-      <article data-page="blog">
-        <h2>Blog</h2>
-        <div class="blog">
-          <ul class="posts"></ul>
-          <div class="post"></div>
-        </div>
-      </article>
+      <article class="blog" data-page="blog"></article>
     </div>
 
   </main>
@@ -232,7 +228,7 @@
     const tabs = document.querySelectorAll('nav a');
     const pages = [...document.querySelectorAll('[data-page]')];
     const postList = document.querySelector('.posts');
-    const postView = document.querySelector('.post');
+    const postView = document.querySelector('.blog');
     const dateFormat = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
     let posts;
     let request = 0;
@@ -243,6 +239,7 @@
       if (!pages.some((page) => page.dataset.page === tab)) tab = 'about';
       tabs.forEach((link) => link.classList.toggle('active', link.hash === '#' + tab));
       pages.forEach((page) => page.classList.toggle('active', page.dataset.page === tab));
+      document.body.dataset.tab = tab;
       window.scrollTo(0, 0);
       if (tab === 'blog') await showPost(slug);
     }
@@ -259,7 +256,7 @@
         </a></li>`).join('');
 
       if (!post) {
-        postView.innerHTML = '<p>No posts yet.</p>';
+        postView.innerHTML = '<h2>Blog</h2><p>No posts yet.</p>';
         return;
       }
 
@@ -276,7 +273,7 @@
       if (id !== request) return;
 
       postView.innerHTML = `
-        <h3>${post.title}</h3>
+        <h2>${post.title}</h2>
         <span class="meta">${dateFormat.format(new Date(post.date))}</span>
         <div class="post-body">${body}</div>`;
       if (slug && matchMedia('(max-width: 768px)').matches) postView.scrollIntoView();

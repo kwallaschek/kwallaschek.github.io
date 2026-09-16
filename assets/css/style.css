@@ -89,6 +89,8 @@ aside {
   position: sticky;
   top: var(--space-6);
   height: fit-content;
+  max-height: calc(100vh - 2 * var(--space-6));
+  overflow-y: auto;
 }
 
 .profile {
@@ -279,20 +281,37 @@ article > h2::before {
   color: var(--gray-600);
 }
 
-/* Blog */
+/* Blog: the sidebar shows a compact profile and the post list */
 
-.blog {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: var(--space-6);
-  align-items: start;
+.posts,
+[data-tab="blog"] .titles,
+[data-tab="blog"] .contacts,
+[data-tab="blog"] .social {
+  display: none;
 }
 
-.posts {
-  position: sticky;
-  top: var(--space-6);
-  padding-right: var(--space-3);
-  border-right: 1px solid var(--gray-200);
+[data-tab="blog"] .posts {
+  display: block;
+}
+
+[data-tab="blog"] .profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: left;
+  margin-bottom: var(--space-6);
+}
+
+[data-tab="blog"] .avatar {
+  width: 48px;
+  height: 48px;
+  margin: 0;
+}
+
+[data-tab="blog"] .name {
+  font-size: var(--fs-lg);
+  margin: 0;
 }
 
 .posts li {
@@ -315,13 +334,13 @@ article > h2::before {
   font-size: var(--fs-xs);
 }
 
-.post h3 {
-  font-size: var(--fs-2xl);
+.blog > h2 {
   margin-bottom: var(--space-1);
 }
 
 .post-body {
   margin-top: var(--space-4);
+  font-size: var(--fs-lg);
   line-height: 1.7;
 }
 
@@ -397,6 +416,8 @@ article > h2::before {
 
   aside {
     position: static;
+    max-height: none;
+    overflow: visible;
   }
 
   .profile {
@@ -424,19 +445,9 @@ article > h2::before {
     font-size: var(--fs-3xl);
   }
 
-  .about p {
+  .about p,
+  .post-body {
     font-size: var(--fs-base);
-  }
-
-  .blog {
-    grid-template-columns: 1fr;
-  }
-
-  .posts {
-    position: static;
-    padding: 0 0 var(--space-3);
-    border-right: 0;
-    border-bottom: 1px solid var(--gray-200);
   }
 }
 

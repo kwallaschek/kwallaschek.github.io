@@ -62,12 +62,15 @@
           </a>
         </li>
       </ul>
+
+      <ul class="posts"></ul>
     </aside>
 
     <div>
       <nav>
-        <button class="active" data-tab="about">About</button>
-        <button data-tab="resume">Resume</button>
+        <a href="#about" class="active">About</a>
+        <a href="#resume">Resume</a>
+        <a href="#blog">Blog</a>
       </nav>
 
       <article class="about active" data-page="about">
@@ -197,11 +200,6 @@
           <h3>Publications</h3>
           <ol>
             <li>
-              <h4><a href="https://moneyforward-dev.jp/entry/2022/03/29/kibela-api-into-noteplan/">NotePlan Kibela Integration</a></h4>
-              <span class="meta">03/2022 — Money Forward Developers' Blog</span>
-            </li>
-
-            <li>
               <h4><a href="https://ieeexplore.ieee.org/document/9145446">NEAT-TCP: Generation of TCP Congestion Control through Neuroevolution of Augmenting Topologies</a></h4>
               <span class="meta">06/2020 — IEEE</span>
               <p>
@@ -220,21 +218,69 @@
           </ol>
         </section>
       </article>
+
+      <article class="blog" data-page="blog"></article>
     </div>
 
   </main>
 
   <script>
-    const tabs = document.querySelectorAll('[data-tab]');
-    const pages = document.querySelectorAll('[data-page]');
+    const tabs = document.querySelectorAll('nav a');
+    const pages = [...document.querySelectorAll('[data-page]')];
+    const postList = document.querySelector('.posts');
+    const postView = document.querySelector('.blog');
+    const dateFormat = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
+    let posts;
+    let request = 0;
 
-    tabs.forEach((tab) => {
-      tab.addEventListener('click', () => {
-        tabs.forEach((t) => t.classList.toggle('active', t === tab));
-        pages.forEach((page) => page.classList.toggle('active', page.dataset.page === tab.dataset.tab));
-        window.scrollTo(0, 0);
-      });
-    });
+    // URL hash drives the page: #about, #resume, #blog, #blog/<slug>
+    async function route() {
+      let [tab, slug] = location.hash.slice(1).split('/');
+      if (!pages.some((page) => page.dataset.page === tab)) tab = 'about';
+      tabs.forEach((link) => link.classList.toggle('active', link.hash === '#' + tab));
+      pages.forEach((page) => page.classList.toggle('active', page.dataset.page === tab));
+      document.body.dataset.tab = tab;
+      window.scrollTo(0, 0);
+      if (tab === 'blog') await showPost(slug);
+    }
+
+    async function showPost(slug) {
+      const id = ++request;
+      posts ??= (await fetch('blog/posts.json').then((r) => r.json()))
+        .sort((a, b) => b.date.localeCompare(a.date));
+      const post = posts.find((p) => p.slug === slug) ?? posts[0];
+
+      postList.innerHTML = posts.map((p) => `
+        <li><a href="#blog/${p.slug}" class="${p === post ? 'active' : ''}">
+          <span class="meta">${dateFormat.format(new Date(p.date))}</span>${p.title}
+        </a></li>`).join('');
+
+      if (!post) {
+        postView.innerHTML = '<h2>Blog</h2><p>No posts yet.</p>';
+        return;
+      }
+
+      let body;
+      if (post.url) {
+        body = `<p>${post.summary ?? ''}</p><p><a href="${post.url}">Read the post on ${post.source} →</a></p>`;
+      } else {
+        const [{ marked }, markdown] = await Promise.all([
+          import('https://cdn.jsdelivr.net/npm/marked@18/lib/marked.esm.js'),
+          fetch(`blog/${post.slug}.md`).then((r) => r.text()),
+        ]);
+        body = marked.parse(markdown);
+      }
+      if (id !== request) return;
+
+      postView.innerHTML = `
+        <h2>${post.title}</h2>
+        <span class="meta">${dateFormat.format(new Date(post.date))}</span>
+        <div class="post-body">${body}</div>`;
+      if (slug && matchMedia('(max-width: 768px)').matches) postView.scrollIntoView();
+    }
+
+    addEventListener('hashchange', route);
+    route();
   </script>
 </body>
 </html>

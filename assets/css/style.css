@@ -213,13 +213,13 @@ article.active {
   to { opacity: 1; transform: none; }
 }
 
-article h2 {
+article > h2 {
   font-size: var(--fs-4xl);
   font-weight: 700;
   margin-bottom: var(--space-6);
 }
 
-article h2::before {
+article > h2::before {
   content: '';
   display: block;
   width: 60px;
@@ -420,7 +420,7 @@ article h2::before {
     margin-bottom: var(--space-4);
   }
 
-  article h2 {
+  article > h2 {
     font-size: var(--fs-3xl);
   }
 

@@ -1,0 +1,8 @@
+[
+  {
+    "AllowedOrigins": ["https://kl-w.de", "https://www.kl-w.de", "http://localhost:8765"],
+    "AllowedMethods": ["GET", "HEAD"],
+    "AllowedHeaders": ["*"],
+    "MaxAgeSeconds": 86400
+  }
+]

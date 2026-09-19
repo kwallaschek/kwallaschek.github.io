@@ -91,7 +91,7 @@ let photosLoading;
 let openIndex;
 
 const photoSrcset = (photo) => photo.sizes.map((size) => `${PHOTOS_URL}/${size.file} ${size.width}w`).join(', ');
-const photoLabel = (photo) => photo.title || photo.caption || `Photo taken ${formatDate(photo.taken)}`.trim();
+const photoLabel = (photo) => `Photo taken ${formatDate(photo.taken)}`.trim();
 
 // One shared request, so overlapping navigations neither fetch nor render the gallery twice.
 function loadPhotos() {
@@ -134,7 +134,7 @@ async function showPhotos(id) {
   // A fresh element each time, so the previous photo never lingers while the next one loads.
   // The stylesheet sizes it from --ratio and --natural; `sizes` only steers which rendition is fetched.
   const image = new Image();
-  const fit = Math.min(innerWidth, (innerHeight - 96) * ratio); // not positive while the window has no size yet, e.g. a background tab
+  const fit = Math.min(innerWidth, (innerHeight - 32) * ratio); // not positive while the window has no size yet, e.g. a background tab
   image.sizes = fit > 0 ? `${Math.round(fit)}px` : '100vw';
   image.srcset = photoSrcset(photo);
   image.src = `${PHOTOS_URL}/${photo.sizes.at(-1).file}`;
@@ -143,9 +143,7 @@ async function showPhotos(id) {
   image.alt = photoLabel(photo);
   image.style.setProperty('--ratio', ratio);
   image.style.setProperty('--natural', `${photo.sizes.at(-1).width}px`);
-  const caption = document.createElement('figcaption');
-  caption.textContent = [photo.title, photo.caption].filter(Boolean).join(' — ');
-  figure.replaceChildren(image, caption);
+  figure.replaceChildren(image);
 
   lightbox.querySelector('.lightbox-prev').href = `#photos/${photos.at(index - 1).id}`;
   lightbox.querySelector('.lightbox-next').href = `#photos/${photos[(index + 1) % photos.length].id}`;

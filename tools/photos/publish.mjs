@@ -50,7 +50,6 @@ try {
 if (!files.length) fail(`No photos found in ${src}`);
 
 await mkdir(OUT, { recursive: true });
-const captions = await readJson(join(src, 'captions.json'));
 const photos = [];
 const current = new Set(['index.json']);
 for (const file of files) {
@@ -108,10 +107,9 @@ async function build(file) {
     sizes.push({ width: actual, file: name });
   }
 
-  const caption = captions[file] ?? captions[id] ?? {};
-  const taken = caption.taken ?? takenDate(meta.exif) ?? (await stat(join(src, file))).mtime.toISOString().slice(0, 10);
+  const taken = takenDate(meta.exif) ?? (await stat(join(src, file))).mtime.toISOString().slice(0, 10);
   console.log(`${file} → ${id} (${sizes.map((size) => size.width).join(', ')}px)`);
-  return { id, ...caption, taken, width, height, sizes };
+  return { id, taken, width, height, sizes };
 }
 
 // Ids are ASCII so URLs and object keys stay simple. A name that loses letters on the way
@@ -141,15 +139,6 @@ async function exists(path) {
     return true;
   } catch {
     return false;
-  }
-}
-
-async function readJson(path) {
-  try {
-    return JSON.parse(await readFile(path, 'utf8'));
-  } catch (error) {
-    if (error.code === 'ENOENT') return {};
-    fail(`${path}: ${error.message}`);
   }
 }
 

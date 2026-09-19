@@ -71,6 +71,7 @@
         <a href="#about" class="active">About</a>
         <a href="#resume">Resume</a>
         <a href="#blog">Blog</a>
+        <a href="#photos">Photos</a>
       </nav>
 
       <article class="about active" data-page="about">
@@ -220,67 +221,28 @@
       </article>
 
       <article class="blog" data-page="blog"></article>
+
+      <article data-page="photos">
+        <h2>Photos</h2>
+        <div class="gallery"></div>
+      </article>
     </div>
 
   </main>
 
-  <script>
-    const tabs = document.querySelectorAll('nav a');
-    const pages = [...document.querySelectorAll('[data-page]')];
-    const postList = document.querySelector('.posts');
-    const postView = document.querySelector('.blog');
-    const dateFormat = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
-    let posts;
-    let request = 0;
+  <dialog class="lightbox" aria-label="Photo">
+    <a class="lightbox-close" href="#photos" aria-label="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </a>
+    <a class="lightbox-prev" href="#photos" aria-label="Previous photo">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </a>
+    <figure></figure>
+    <a class="lightbox-next" href="#photos" aria-label="Next photo">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </a>
+  </dialog>
 
-    // URL hash drives the page: #about, #resume, #blog, #blog/<slug>
-    async function route() {
-      let [tab, slug] = location.hash.slice(1).split('/');
-      if (!pages.some((page) => page.dataset.page === tab)) tab = 'about';
-      tabs.forEach((link) => link.classList.toggle('active', link.hash === '#' + tab));
-      pages.forEach((page) => page.classList.toggle('active', page.dataset.page === tab));
-      document.body.dataset.tab = tab;
-      window.scrollTo(0, 0);
-      if (tab === 'blog') await showPost(slug);
-    }
-
-    async function showPost(slug) {
-      const id = ++request;
-      posts ??= (await fetch('blog/posts.json').then((r) => r.json()))
-        .sort((a, b) => b.date.localeCompare(a.date));
-      const post = posts.find((p) => p.slug === slug) ?? posts[0];
-
-      postList.innerHTML = posts.map((p) => `
-        <li><a href="#blog/${p.slug}" class="${p === post ? 'active' : ''}">
-          <span class="meta">${dateFormat.format(new Date(p.date))}</span>${p.title}
-        </a></li>`).join('');
-
-      if (!post) {
-        postView.innerHTML = '<h2>Blog</h2><p>No posts yet.</p>';
-        return;
-      }
-
-      let body;
-      if (post.url) {
-        body = `<p>${post.summary ?? ''}</p><p><a href="${post.url}">Read the post on ${post.source} →</a></p>`;
-      } else {
-        const [{ marked }, markdown] = await Promise.all([
-          import('https://cdn.jsdelivr.net/npm/marked@18/lib/marked.esm.js'),
-          fetch(`blog/${post.slug}.md`).then((r) => r.text()),
-        ]);
-        body = marked.parse(markdown);
-      }
-      if (id !== request) return;
-
-      postView.innerHTML = `
-        <h2>${post.title}</h2>
-        <span class="meta">${dateFormat.format(new Date(post.date))}</span>
-        <div class="post-body">${body}</div>`;
-      if (slug && matchMedia('(max-width: 768px)').matches) postView.scrollIntoView();
-    }
-
-    addEventListener('hashchange', route);
-    route();
-  </script>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>

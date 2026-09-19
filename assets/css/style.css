@@ -405,6 +405,129 @@ article > h2::before {
   height: auto;
 }
 
+/* Photos */
+
+.gallery {
+  columns: 3;
+  column-gap: var(--space-2);
+}
+
+.gallery a {
+  display: block;
+  margin-bottom: var(--space-2);
+  break-inside: avoid;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--gray-100);
+  border-radius: var(--radius);
+}
+
+/* The "no photos" and error messages */
+.gallery p {
+  column-span: all;
+}
+
+.lightbox {
+  --gutter: var(--space-2);
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  border: 0;
+  outline: none;
+  background: rgba(0, 0, 0, 0.92);
+}
+
+.lightbox[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body:has(.lightbox[open]) {
+  overflow: hidden;
+}
+
+/* Fits the viewport with room for the caption and never grows past the largest rendition.
+   The script sets --ratio and --natural per photo. */
+.lightbox img {
+  display: block;
+  width: min(100vw - 2 * var(--gutter), var(--natural), (100vh - 6rem) * var(--ratio));
+  width: min(100vw - 2 * var(--gutter), var(--natural), (100svh - 6rem) * var(--ratio));
+  height: auto;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.lightbox figcaption {
+  margin-top: var(--space-2);
+  font-size: var(--fs-sm);
+  text-align: center;
+  color: var(--gray-500);
+}
+
+.lightbox a {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.5);
+  transition: var(--transition);
+}
+
+.lightbox a:hover {
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.lightbox-close {
+  top: var(--space-2);
+  right: var(--space-2);
+}
+
+.lightbox-prev,
+.lightbox-next {
+  top: calc(50% - 22px);
+}
+
+.lightbox-prev {
+  left: var(--space-2);
+}
+
+.lightbox-next {
+  right: var(--space-2);
+}
+
+.lightbox.single .lightbox-prev,
+.lightbox.single .lightbox-next {
+  display: none;
+}
+
+/* Wide screens keep the photo clear of the arrows */
+@media (min-width: 769px) {
+  .lightbox {
+    --gutter: 5rem;
+  }
+}
+
 /* Responsive */
 
 @media (max-width: 768px) {
@@ -448,6 +571,10 @@ article > h2::before {
   .about p,
   .post-body {
     font-size: var(--fs-base);
+  }
+
+  .gallery {
+    columns: 2;
   }
 }
 

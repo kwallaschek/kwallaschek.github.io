@@ -1,0 +1,15 @@
+{
+  "name": "kl-w-photos",
+  "private": true,
+  "type": "module",
+  "description": "Resizes photos, writes the gallery manifest, and syncs everything to the R2 bucket behind photos.kl-w.de",
+  "scripts": {
+    "build": "node publish.mjs --no-upload",
+    "preview": "node publish.mjs --dry-run",
+    "publish": "node publish.mjs"
+  },
+  "dependencies": {
+    "exif-reader": "^2.0.2",
+    "sharp": "^0.34.0"
+  }
+}

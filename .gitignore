@@ -3,3 +3,6 @@
 CLAUDE.md
 .DS_Store
 *.zip
+tools/photos/node_modules/
+tools/photos/out/
+tools/photos/.env

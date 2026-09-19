@@ -51,6 +51,7 @@ if (!files.length) fail(`No photos found in ${src}`);
 
 await mkdir(OUT, { recursive: true });
 const captions = await readJson(join(src, 'captions.json'));
+if (dryRun) await addMissingCaptions();
 const photos = [];
 const current = new Set(['index.json']);
 for (const file of files) {
@@ -108,10 +109,20 @@ async function build(file) {
     sizes.push({ width: actual, file: name });
   }
 
-  const caption = captions[file] ?? captions[id] ?? {};
+  // Fields left empty in captions.json count as absent
+  const caption = Object.fromEntries(Object.entries(captions[file] ?? captions[id] ?? {}).filter(([, value]) => value !== ''));
   const taken = caption.taken ?? takenDate(meta.exif) ?? (await stat(join(src, file))).mtime.toISOString().slice(0, 10);
   console.log(`${file} → ${id} (${sizes.map((size) => size.width).join(', ')}px)`);
   return { id, ...caption, taken, width, height, sizes };
+}
+
+// The preview gives every photo an entry in captions.json, so adding titles is a matter of filling in blanks.
+async function addMissingCaptions() {
+  const missing = files.filter((file) => !(file in captions) && !(slug(file) in captions));
+  if (!missing.length) return;
+  for (const file of missing) captions[file] = { title: '', caption: '' };
+  await writeFile(join(src, 'captions.json'), JSON.stringify(captions, null, 2) + '\n');
+  console.log(`Added ${missing.length} empty ${missing.length === 1 ? 'entry' : 'entries'} to captions.json; fill in the ones you want and publish`);
 }
 
 // Ids are ASCII so URLs and object keys stay simple. A name that loses letters on the way

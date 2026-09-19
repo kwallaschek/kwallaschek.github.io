@@ -43,7 +43,9 @@ whatever is in the bucket but no longer in the folder is deleted. File names car
 fingerprint of the photo, so a re-exported photo shows up at once despite the year-long
 cache lifetime of the images.
 
-`npm run preview` lists what a publish would upload and delete without doing it.
+`npm run preview` lists what a publish would upload and delete without doing it. It also adds an
+empty entry to `captions.json` for every photo that has none, ready to be filled in. Fields
+left empty are ignored.
 `npm run build` only writes the files to `tools/photos/out/`.
 
 Cloudflare's edge can keep serving a deleted photo from its cache for a while. If one has to

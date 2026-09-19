@@ -452,22 +452,15 @@ body:has(.lightbox[open]) {
   overflow: hidden;
 }
 
-/* Fits the viewport with room for the caption and never grows past the largest rendition.
+/* Fits the viewport with a small margin and never grows past the largest rendition.
    The script sets --ratio and --natural per photo. */
 .lightbox img {
   display: block;
-  width: min(100vw - 2 * var(--gutter), var(--natural), (100vh - 6rem) * var(--ratio));
-  width: min(100vw - 2 * var(--gutter), var(--natural), (100svh - 6rem) * var(--ratio));
+  width: min(100vw - 2 * var(--gutter), var(--natural), (100vh - 2rem) * var(--ratio));
+  width: min(100vw - 2 * var(--gutter), var(--natural), (100svh - 2rem) * var(--ratio));
   height: auto;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.05);
-}
-
-.lightbox figcaption {
-  margin-top: var(--space-2);
-  font-size: var(--fs-sm);
-  text-align: center;
-  color: var(--gray-500);
 }
 
 .lightbox a {

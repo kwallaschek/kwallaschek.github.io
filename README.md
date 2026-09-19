@@ -28,13 +28,7 @@ One-time setup:
 
 Each time you add, change or remove photos:
 
-1. Edit the `PHOTOS_SRC` folder. To add titles or captions, keep a `captions.json` next to
-   the photos:
-
-   ```json
-   { "DSC_0123.jpg": { "title": "Shinagawa at dusk", "caption": "35mm, f/2" } }
-   ```
-
+1. Edit the `PHOTOS_SRC` folder.
 2. `cd tools/photos && npm run publish`
 
 The bucket mirrors the folder. Every photo is resized to 480, 1200 and 2400px WebP with the

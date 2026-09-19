@@ -134,7 +134,8 @@ async function showPhotos(id) {
   // A fresh element each time, so the previous photo never lingers while the next one loads.
   // The stylesheet sizes it from --ratio and --natural; `sizes` only steers which rendition is fetched.
   const image = new Image();
-  image.sizes = `${Math.round(Math.min(innerWidth, (innerHeight - 96) * ratio))}px`;
+  const fit = Math.min(innerWidth, (innerHeight - 96) * ratio); // not positive while the window has no size yet, e.g. a background tab
+  image.sizes = fit > 0 ? `${Math.round(fit)}px` : '100vw';
   image.srcset = photoSrcset(photo);
   image.src = `${PHOTOS_URL}/${photo.sizes.at(-1).file}`;
   image.width = photo.width;

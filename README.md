@@ -11,6 +11,11 @@ Personal portfolio site, published with GitHub Pages at https://kl-w.de.
 
 Posts are listed newest first. An entry with `url` and `source` instead of a Markdown file links to a post published elsewhere.
 
+The Blog tab is switched off for now: its link in the `<nav>` of `index.html` carries the `hidden`
+attribute. A hidden tab's page cannot be opened either, so `#blog` links land on About, and the
+About text switches from its `with-blog` to its `without-blog` wording. Remove `hidden` to bring
+the blog back; the posts and the code behind them are all still there.
+
 ## Publishing photos
 
 Photos are not stored in this repo. They live in a Cloudflare R2 bucket served at

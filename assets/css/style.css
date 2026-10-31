@@ -238,6 +238,12 @@ article > h2::before {
   margin-bottom: var(--space-4);
 }
 
+/* Text that mentions the blog follows the Blog tab: hiding its link swaps in the version without it */
+main:has(nav a[href="#blog"][hidden]) .with-blog,
+main:not(:has(nav a[href="#blog"][hidden])) .without-blog {
+  display: none;
+}
+
 /* Resume */
 
 .timeline {

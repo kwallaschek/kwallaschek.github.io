@@ -1,7 +1,9 @@
 const PHOTOS_URL = 'https://photos.kl-w.de';
 
-const tabs = document.querySelectorAll('nav a');
-const pages = [...document.querySelectorAll('[data-page]')];
+// A tab hidden in the markup, like the blog for now, takes its page out of the routing as well.
+const tabs = [...document.querySelectorAll('nav a:not([hidden])')];
+const pages = [...document.querySelectorAll('[data-page]')]
+  .filter((page) => tabs.some((link) => link.hash === '#' + page.dataset.page));
 const dateFormat = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
 let currentTab;
 let navigation = 0; // bumped on every route change, so a slow load can tell that it went stale
